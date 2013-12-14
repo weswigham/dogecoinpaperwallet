@@ -1,12 +1,11 @@
-**** LOOKING FOR THE ZIP FILE TO DOWNLOAD? ************************************
-If you're on already at https://github.com/cantonbecker/bitcoinpaperwallet
-Then just look for the button that says "Download ZIP". Look to your right -->
+**** Wow. Very ZIP FILE. do want? ********************************************
+such browsing https://github.com/nsfmc/paperwallet
+so ease. very button. "Download ZIP". look. right ----->
 *******************************************************************************
 
-*** bitcoinpaperwallet.com ***
 
-This project is a fork of bitaddress.org, the original trustworthy
-JavaScript powered offline bitcoin address generator. 
+very fork. so bitcoinpaperwallet.com, such improvement!
+JavaScript powered offline bitcoin address generator.
 
 This attractive paper wallet design is two-sided and folds up to
 hide the private key. Optional tamper-evident hologram tape can be purchased
@@ -20,18 +19,18 @@ Use bitaddress.org if you need BIP38, brain wallets, or bulk addresses.
 *** HOW TO USE THIS GENERATOR ***
 
 1) Extract the ZIP file
-2) Open up the 'generate-wallet.html' file with your web browser. 
+2) Open up the 'generate-wallet.html' file with your web browser.
 3) Follow the steps for calibrating your printer and then printing
    the front and back of each wallet. Use landscape mode when printing!
-   
-Rendering and printing seems to work best using: 
+
+Rendering and printing seems to work best using:
 
    OS X:     Safari or Chrome or Firefox
    Windows:  Chrome or Firefox
    Linux:    Firefox
 
 
-*** COMPARED WITH BITADDRESS.ORG ***
+*** COMPARED WITH BITCOINPAPERWALLET.COM ***
 
 Images and resources have been moved out of the .html file (where they were
 base-64 encoded) and into an images directory to make the code easier to review.
@@ -45,28 +44,25 @@ You can also bypass the random key generator and supply your own keys or so-call
 
 *** HOW TO VERIFY THE AUTHENTICITY OF THIS DOWNLOAD ***
 
-After downloading the ZIP package for this generator, you should find a file 
+After downloading the ZIP package for this generator, you should find a file
 named generate-wallet.html.sig which you can use to:
 
-* Verify that generate-wallet.html hasn't been tampered with, and
-* Get proof that it really was authored by Canton Becker (canton@gmail.com) 
-  whose GPG public key and fingerprint should be confirmed at http://cantonbecker.com
-  
-For example, if you have GPG installed, you should be able cd to the appropriate 
+* how proov generate-wallet.html not tamper.
+* wow. such fork. very commiter. Marcos Ojeda (marcos@generic.cx)
+  so nerd. https://generic.cx/pgp.html
+
+For example, if you have GPG installed, you should be able cd to the appropriate
 directory and type in these two commands:
 
-  gpg --recv-key 36E1D9B6
-  gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html 
+  gpg --recv-key 9B7C45A7
+  gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
 
-And then verify the resulting signature's fingerprint against Canton Becker's
-published fingerprint at http://cantonbecker.com
+such signature. very fingerprint. https://generic.cx/pgp.html
 
 If you get warnings like "This key is not certified, there is no indication that
 the key belongs to the owner" do not worry, this is normal.
 
-- Canton Becker
-http://cantonbecker.com
-canton@gmail.com
+- wow. marcos
 
 
 
@@ -74,25 +70,25 @@ canton@gmail.com
 --- The original bitaddress.org README continues below ---
 ----------------------------------------------------------
 
-Now Bitcoin addresses and their corresponding private key can be conveniently 
+Now Bitcoin addresses and their corresponding private key can be conveniently
 generated in a web browser.
 
 The bitaddress.org project provides an all-in-one HTML document with embedded
 JavaScript/Css/Images. The JavaScript is readable not minified and contains no
-XMLHttpRequest's (no AJAX). The benefit of this technique is you can load the 
-JavaScript locally and trust that the JavaScript did not change after being 
-loaded. 
+XMLHttpRequest's (no AJAX). The benefit of this technique is you can load the
+JavaScript locally and trust that the JavaScript did not change after being
+loaded.
 
 Here is a link to the BitcoinTalk.org forum topic discussing this project:
 https://bitcointalk.org/index.php?topic=43496.0
 
 
-Please send DONATIONS for this project to Bitcoin Address: 
+Please send DONATIONS for this project to Bitcoin Address:
 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
 
 
-END USER NOTES: 
- 1) To print QRCode in IE8 you must enable the "Print Background Colors and 
+END USER NOTES:
+ 1) To print QRCode in IE8 you must enable the "Print Background Colors and
     Images" checkbox on the "Page Setup" screen.
  2) For Bulk Wallet I recommended using Google Chrome, it's the fastest.
  3) Requires IE8+, Firefox, Chrome or sufficient JavaScript support.
@@ -105,11 +101,11 @@ END USER NOTES:
 
 Notice of Copyrights and Licenses:
 ---------------------------------------
-The bitaddress.org project, software and embedded resources are copyright bitaddress.org. 
+The bitaddress.org project, software and embedded resources are copyright bitaddress.org.
 The bitaddress.org name and logo are not part of the open source license.
 
-Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights 
-of others. The individual copyrights are included throughout the document along with their 
+Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights
+of others. The individual copyrights are included throughout the document along with their
 licenses. Included JavaScript libraries are separated with HTML script tags.
 
 Summary of JavaScript functions with a redistributable license:
@@ -126,19 +122,19 @@ window.Bitcoin			MIT License
 The bitaddress.org software is available under The MIT License (MIT)
 Copyright (c) 2011-2012 bitaddress.org
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this 
-software and associated documentation files (the "Software"), to deal in the Software 
-without restriction, including without limitation the rights to use, copy, modify, 
-merge, publish, distribute, sublicense, and/or sell copies of the Software, and to 
-permit persons to whom the Software is furnished to do so, subject to the following 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this
+software and associated documentation files (the "Software"), to deal in the Software
+without restriction, including without limitation the rights to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to the following
 conditions:
 
-The above copyright notice and this permission notice shall be included in all copies 
+The above copyright notice and this permission notice shall be included in all copies
 or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
