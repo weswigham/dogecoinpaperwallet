@@ -3,23 +3,28 @@
 <head>
 	<meta charset="iso-8859-1">
 	<!--
-    
+
     generate-wallet.html (from https://bitcoinpaperwallet.com)
-    
-    Contact: Canton Becker / canton@gmail.com
-    
+
+    Very email: Marcos Ojeda < marcos@generic.cx >
+
     generate-wallet.html is always distributed with a PGP signature "generate-wallet.html.sig" which you
     can use to validate the integrity and authorship of this file like so:
-    
+
     gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
-    
+
+	Such copyright. So portion. omg 2013. marcos.a.ojeda pls http://generic.cx
+
     Wallet design and portions of this code are ©Copyright 2013 Canton Becker and bitaddress.org
     Other portions of this code are copyrighted by their respective authors - see below.
-    
+
 
     ****************************************************************************************
+    * Wow. So appreciate. Nice coin. DDhDcKw2gMsr2RJSbeB91Nthp1UhSJgVAW
+    * github: http://github.com/nsfmc/paperwallet
+    * conservative. very fiat. 12hejef8yqrjrVFvA1nyM9tJGVKAnYYFDf
     ****************************************************************************************
-    * Contributions to offset bitcoinpaperwallet.com expenses are generously accepted.
+    * Much Inspiration. Very bitcoinpaperwallet.com
     * Bitcoin Donation Address: 1Pjg628vjMLBvADrPHsthtzKiryM2y46DG
 	* GitHub Repository: 	https://github.com/cantonbecker/bitcoinpaperwallet
     ****************************************************************************************
@@ -32,9 +37,9 @@
 
 	Notice of Copyrights and Licenses:
 	***********************************
-	The bitaddress.org project, software and embedded resources are copyright bitaddress.org. 
+	The bitaddress.org project, software and embedded resources are copyright bitaddress.org.
 
-	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others. 
+	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others.
 	The individual copyrights are included throughout the document along with their licenses.
 	Included JavaScript libraries are separated with HTML script tags.
 
@@ -51,22 +56,22 @@
 	window.Crypto_scrypt		MIT License
 	ninja.(*)				MIT License			// lots of code from bitaddress.org
 	parser.setUA			GPLv2 & MIT			// UAParser.js
-    
+
 	This HTML file and the graphics required to make it work are available under The MIT License (MIT)
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
-	associated documentation files (the "Software"), to deal in the Software without restriction, including 
-	without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or 
-	sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject 
+	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+	associated documentation files (the "Software"), to deal in the Software without restriction, including
+	without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+	sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject
 	to the following conditions:
 
-	The above copyright notice and this permission notice shall be included in all copies or substantial 
+	The above copyright notice and this permission notice shall be included in all copies or substantial
 	portions of the Software.
 
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
-	LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
-	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
-	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+	LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 	GitHub Repository: https://github.com/cantonbecker/bitcoinpaperwallet
@@ -77,59 +82,59 @@
 
 	<script type="text/javascript">
 // Array.prototype.map function is in the public domain.
-// Production steps of ECMA-262, Edition 5, 15.4.4.19  
-// Reference: http://es5.github.com/#x15.4.4.19  
+// Production steps of ECMA-262, Edition 5, 15.4.4.19
+// Reference: http://es5.github.com/#x15.4.4.19
 if (!Array.prototype.map) {
 	Array.prototype.map = function (callback, thisArg) {
 		var T, A, k;
 		if (this == null) {
 			throw new TypeError(" this is null or not defined");
 		}
-		// 1. Let O be the result of calling ToObject passing the |this| value as the argument.  
+		// 1. Let O be the result of calling ToObject passing the |this| value as the argument.
 		var O = Object(this);
-		// 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".  
-		// 3. Let len be ToUint32(lenValue).  
+		// 2. Let lenValue be the result of calling the Get internal method of O with the argument "length".
+		// 3. Let len be ToUint32(lenValue).
 		var len = O.length >>> 0;
-		// 4. If IsCallable(callback) is false, throw a TypeError exception.  
-		// See: http://es5.github.com/#x9.11  
+		// 4. If IsCallable(callback) is false, throw a TypeError exception.
+		// See: http://es5.github.com/#x9.11
 		if ({}.toString.call(callback) != "[object Function]") {
 			throw new TypeError(callback + " is not a function");
 		}
-		// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.  
+		// 5. If thisArg was supplied, let T be thisArg; else let T be undefined.
 		if (thisArg) {
 			T = thisArg;
 		}
-		// 6. Let A be a new array created as if by the expression new Array(len) where Array is  
-		// the standard built-in constructor with that name and len is the value of len.  
+		// 6. Let A be a new array created as if by the expression new Array(len) where Array is
+		// the standard built-in constructor with that name and len is the value of len.
 		A = new Array(len);
-		// 7. Let k be 0  
+		// 7. Let k be 0
 		k = 0;
-		// 8. Repeat, while k < len  
+		// 8. Repeat, while k < len
 		while (k < len) {
 			var kValue, mappedValue;
-			// a. Let Pk be ToString(k).  
-			//   This is implicit for LHS operands of the in operator  
-			// b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.  
-			//   This step can be combined with c  
-			// c. If kPresent is true, then  
+			// a. Let Pk be ToString(k).
+			//   This is implicit for LHS operands of the in operator
+			// b. Let kPresent be the result of calling the HasProperty internal method of O with argument Pk.
+			//   This step can be combined with c
+			// c. If kPresent is true, then
 			if (k in O) {
-				// i. Let kValue be the result of calling the Get internal method of O with argument Pk.  
+				// i. Let kValue be the result of calling the Get internal method of O with argument Pk.
 				kValue = O[k];
-				// ii. Let mappedValue be the result of calling the Call internal method of callback  
-				// with T as the this value and argument list containing kValue, k, and O.  
+				// ii. Let mappedValue be the result of calling the Call internal method of callback
+				// with T as the this value and argument list containing kValue, k, and O.
 				mappedValue = callback.call(T, kValue, k, O);
-				// iii. Call the DefineOwnProperty internal method of A with arguments  
-				// Pk, Property Descriptor {Value: mappedValue, Writable: true, Enumerable: true, Configurable: true},  
-				// and false.  
-				// In browsers that support Object.defineProperty, use the following:  
-				// Object.defineProperty(A, Pk, { value: mappedValue, writable: true, enumerable: true, configurable: true });  
-				// For best browser support, use the following:  
+				// iii. Call the DefineOwnProperty internal method of A with arguments
+				// Pk, Property Descriptor {Value: mappedValue, Writable: true, Enumerable: true, Configurable: true},
+				// and false.
+				// In browsers that support Object.defineProperty, use the following:
+				// Object.defineProperty(A, Pk, { value: mappedValue, writable: true, enumerable: true, configurable: true });
+				// For best browser support, use the following:
 				A[k] = mappedValue;
 			}
-			// d. Increase k by 1.  
+			// d. Increase k by 1.
 			k++;
 		}
-		// 9. return A  
+		// 9. return A
 		return A;
 	};
 }
@@ -283,7 +288,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		};
 
 	})();
-}	
+}
 	</script>
 	<script type="text/javascript">
 /*!
@@ -420,7 +425,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	SHA256._digestsize = 32;
 
-})();	
+})();
 	</script>
 	<script type="text/javascript">
 /*!
@@ -476,7 +481,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	};
 
-})(); 
+})();
 	</script>
 	<script type="text/javascript">
 /*!
@@ -628,7 +633,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			// Allow mode to override options
 			if (mode.fixOptions) mode.fixOptions(options);
 
-			var 
+			var
 
 			// Convert to bytes if message is a string
 		m = (
@@ -669,7 +674,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			// Allow mode to override options
 			if (mode.fixOptions) mode.fixOptions(options);
 
-			var 
+			var
 
 			// Convert to bytes if ciphertext is a string
 		c = (
@@ -1111,9 +1116,9 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Electronic Code Book mode.
-	* 
+	*
 	* ECB applies the cipher directly against each block of the input.
-	* 
+	*
 	* ECB does not require an initialization vector.
 	*/
 	var ECB = C_mode.ECB = function () {
@@ -1148,7 +1153,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Cipher block chaining
-	* 
+	*
 	* The first block is XORed with the IV. Subsequent blocks are XOR with the
 	* previous cipher output.
 	*/
@@ -1202,11 +1207,11 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Cipher feed back
-	* 
+	*
 	* The cipher output is XORed with the plain text to produce the cipher output,
 	* which is then fed back into the cipher to produce a bit pattern to XOR the
 	* next block with.
-	* 
+	*
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var CFB = C_mode.CFB = function () {
@@ -1254,10 +1259,10 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 
 	/**
 	* Output feed back
-	* 
+	*
 	* The cipher repeatedly encrypts its own output. The output is XORed with the
 	* plain text to produce the cipher text.
-	* 
+	*
 	* This is a stream cipher mode and does not require padding.
 	*/
 	var OFB = C_mode.OFB = function () {
@@ -1513,11 +1518,11 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	<script type="text/javascript">
 /*!
 * Random number generator with ArcFour PRNG
-* 
+*
 * NOTE: For best results, put code like
 * <body onclick='SecureRandom.seedTime();' onkeypress='SecureRandom.seedTime();'>
 * in your main HTML document.
-* 
+*
 * Copyright Tom Wu, bitaddress.org  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
@@ -1655,7 +1660,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 * Basic Javascript Elliptic Curve implementation
 * Ported loosely from BouncyCastle's Java EC code
 * Only Fp curves implemented for now
-* 
+*
 * Copyright Tom Wu, bitaddress.org  BSD License.
 * http://www-cs-students.stanford.edu/~tjw/jsbn/LICENSE
 */
@@ -1716,7 +1721,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	/**
 	* return a sqrt root - the routine verifies that the calculation
 	* returns the right value - if none exists it returns null.
-	* 
+	*
 	* Copyright (c) 2000 - 2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
 	* Ported to JavaScript by bitaddress.org
 	*/
@@ -2005,7 +2010,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 		var len = 32; // integerToBytes will zero pad if integer is less than 32 bytes. 32 bytes length is required by the Bitcoin protocol.
 		var enc = ec.integerToBytes(x, len);
 
-		// when compressed prepend byte depending if y point is even or odd 
+		// when compressed prepend byte depending if y point is even or odd
 		if (compressed) {
 			if (y.isEven()) {
 				enc.unshift(0x02);
@@ -2323,7 +2328,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	<script type="text/javascript">
 /*!
 * Basic JavaScript BN library - subset useful for RSA encryption. v1.3
-* 
+*
 * Copyright (c) 2005  Tom Wu
 * All Rights Reserved.
 * BSD License
@@ -3604,7 +3609,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 // Licensed under the MIT license:
 //   http://www.opensource.org/licenses/mit-license.php
 //
-// The word "QR Code" is registered trademark of 
+// The word "QR Code" is registered trademark of
 // DENSO WAVE INCORPORATED
 //   http://www.denso-wave.com/qrcode/faqpatent-e.html
 //
@@ -3818,7 +3823,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 			var data = (this.errorCorrectLevel << 3) | maskPattern;
 			var bits = QRCode.Util.getBCHTypeInfo(data);
 
-			// vertical		
+			// vertical
 			for (var i = 0; i < 15; i++) {
 
 				var mod = (!test && ((bits >> i) & 1) == 1);
@@ -4501,7 +4506,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[2, 35, 17],
 	[2, 35, 13],
 
-	// 4		
+	// 4
 	[1, 100, 80],
 	[2, 50, 32],
 	[2, 50, 24],
@@ -4519,7 +4524,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[4, 43, 19],
 	[4, 43, 15],
 
-	// 7		
+	// 7
 	[2, 98, 78],
 	[4, 49, 31],
 	[2, 32, 14, 4, 33, 15],
@@ -4537,7 +4542,7 @@ if (typeof Crypto == "undefined" || !Crypto.util) {
 	[4, 36, 16, 4, 37, 17],
 	[4, 36, 12, 4, 37, 13],
 
-	// 10		
+	// 10
 	[2, 86, 68, 2, 87, 69],
 	[4, 69, 43, 1, 70, 44],
 	[6, 43, 19, 2, 44, 20],
@@ -4731,7 +4736,7 @@ Bitcoin.Address = function (bytes) {
 	this.version = Bitcoin.Address.networkVersion;
 };
 
-Bitcoin.Address.networkVersion = 0x00; // mainnet
+Bitcoin.Address.networkVersion = 0x1e; // so doge
 
 /**
 * Serialize this object as a standard Bitcoin address.
@@ -4916,7 +4921,7 @@ Bitcoin.ECDSA = (function () {
 		* Parses a byte array containing a DER-encoded signature.
 		*
 		* This function will return an object of the form:
-		* 
+		*
 		* {
 		*   r: BigInteger,
 		*   s: BigInteger
@@ -5094,7 +5099,7 @@ Bitcoin.ECKey = (function () {
 			} else if (ECKey.isBase64Format(input)) {
 				bytes = Crypto.util.base64ToBytes(input);
 			}
-			
+
 			if (ECKey.isBase6Format(input)) {
 				this.priv = new BigInteger(input, 6);
 			} else if (bytes == null || bytes.length != 32) {
@@ -5108,7 +5113,7 @@ Bitcoin.ECKey = (function () {
 		this.compressed = (this.compressed == undefined) ? !!ECKey.compressByDefault : this.compressed;
 	};
 
-	ECKey.privateKeyPrefix = 0x80; // mainnet 0x80    testnet 0xEF
+	ECKey.privateKeyPrefix = 0x9e; // dogenet 0x9e   mainnet 0x80    testnet 0xEF
 
 	/**
 	* Whether public keys should be returned compressed by default.
@@ -5194,7 +5199,7 @@ Bitcoin.ECKey = (function () {
 		return this;
 	};
 
-	// Sipa Private Key Wallet Import Format 
+	// Sipa Private Key Wallet Import Format
 	ECKey.prototype.getBitcoinWalletImportFormat = function () {
 		var bytes = this.getBitcoinPrivateKeyByteArray();
 		bytes.unshift(ECKey.privateKeyPrefix); // prepend 0x80 byte
@@ -5205,12 +5210,12 @@ Bitcoin.ECKey = (function () {
 		return privWif;
 	};
 
-	// Private Key Hex Format 
+	// Private Key Hex Format
 	ECKey.prototype.getBitcoinHexFormat = function () {
 		return Crypto.util.bytesToHex(this.getBitcoinPrivateKeyByteArray()).toString().toUpperCase();
 	};
 
-	// Private Key Base64 Format 
+	// Private Key Base64 Format
 	ECKey.prototype.getBitcoinBase64Format = function () {
 		return Crypto.util.bytesToBase64(this.getBitcoinPrivateKeyByteArray());
 	};
@@ -5218,7 +5223,7 @@ Bitcoin.ECKey = (function () {
 	ECKey.prototype.getBitcoinPrivateKeyByteArray = function () {
 		// Get a copy of private key as a byte array
 		var bytes = this.priv.toByteArrayUnsigned();
-		// zero pad if private key is less than 32 bytes 
+		// zero pad if private key is less than 32 bytes
 		while (bytes.length < 32) bytes.unshift(0x00);
 		return bytes;
 	};
@@ -5292,19 +5297,19 @@ Bitcoin.ECKey = (function () {
 		return /^[A-Fa-f0-9]{64}$/.test(key);
 	};
 
-	// 51 characters base58, always starts with a '5'
+	// 51 characters base58, always starts with a '6'
 	ECKey.isWalletImportFormat = function (key) {
 		key = key.toString();
-		return (ECKey.privateKeyPrefix == 0x80) ?
-							(/^5[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key)) :
+		return (ECKey.privateKeyPrefix == 0x9e) ?
+							(/^6[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key)) :
 							(/^9[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{50}$/.test(key));
 	};
 
 	// 52 characters base58
 	ECKey.isCompressedWalletImportFormat = function (key) {
 		key = key.toString();
-		return (ECKey.privateKeyPrefix == 0x80) ?
-							(/^[LK][123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key)) :
+		return (ECKey.privateKeyPrefix == 0x9e) ?
+							(/^T[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key)) :
 							(/^c[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51}$/.test(key));
 	};
 
@@ -5444,17 +5449,17 @@ Bitcoin.Util = {
 	<script type="text/javascript">
 /*
 * Copyright (c) 2010-2011 Intalio Pte, All Rights Reserved
-* 
+*
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to deal
 * in the Software without restriction, including without limitation the rights
 * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 * copies of the Software, and to permit persons to whom the Software is
 * furnished to do so, subject to the following conditions:
-* 
+*
 * The above copyright notice and this permission notice shall be included in
 * all copies or substantial portions of the Software.
-* 
+*
 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -5474,7 +5479,7 @@ Bitcoin.Util = {
 	* N = Cpu cost
 	* r = Memory cost
 	* p = parallelization cost
-	* 
+	*
 	*/
 	window.Crypto_scrypt = function (passwd, salt, N, r, p, dkLen, callback) {
 		if (N == 0 || (N & (N - 1)) != 0) throw Error("N must be > 0 and a power of 2");
@@ -5749,16 +5754,16 @@ Bitcoin.Util = {
 	//
 	// Copyright © 2012-2013 Faisalman <fyzlman@gmail.com>
 	// Dual licensed under GPLv2 & MIT
-	
+
 	(function (window, undefined) {
-	
+
 		'use strict';
-	
+
 		//////////////
 		// Constants
 		/////////////
-	
-	
+
+
 		var EMPTY       = '',
 			UNKNOWN     = '?',
 			FUNC_TYPE   = 'function',
@@ -5774,13 +5779,13 @@ Bitcoin.Util = {
 			CONSOLE     = 'console',
 			MOBILE      = 'mobile',
 			TABLET      = 'tablet';
-	
-	
+
+
 		///////////
 		// Helper
 		//////////
-	
-	
+
+
 		var util = {
 			has : function (str1, str2) {
 				return str2.toLowerCase().indexOf(str1.toLowerCase()) !== -1;
@@ -5789,23 +5794,23 @@ Bitcoin.Util = {
 				return str.toLowerCase();
 			}
 		};
-	
-	
+
+
 		///////////////
 		// Map helper
 		//////////////
-	
-	
+
+
 		var mapper = {
-	
+
 			rgx : function () {
-	
+
 				// loop through all regexes maps
 				for (var result, i = 0, j, k, p, q, matches, match, args = arguments; i < args.length; i += 2) {
-	
+
 					var regex = args[i],       // even sequence (0,2,4,..)
 						props = args[i + 1];   // odd sequence (1,3,5,..)
-	
+
 					// construct object barebones
 					if (typeof(result) === UNDEF_TYPE) {
 						result = {};
@@ -5818,7 +5823,7 @@ Bitcoin.Util = {
 							}
 						}
 					}
-	
+
 					// try matching uastring with regexes
 					for (j = k = 0; j < regex.length; j++) {
 						matches = regex[j].exec(this.getUA());
@@ -5855,14 +5860,14 @@ Bitcoin.Util = {
 							break;
 						}
 					}
-	
+
 					if(!!matches) break; // break the loop immediately if match found
 				}
 				return result;
 			},
-	
+
 			str : function (str, map) {
-	
+
 				for (var i in map) {
 					// check if array
 					if (typeof(map[i]) === OBJ_TYPE && map[i].length > 0) {
@@ -5878,15 +5883,15 @@ Bitcoin.Util = {
 				return str;
 			}
 		};
-	
-	
+
+
 		///////////////
 		// String map
 		//////////////
-	
-	
+
+
 		var maps = {
-	
+
 			browser : {
 				oldsafari : {
 					major : {
@@ -5906,7 +5911,7 @@ Bitcoin.Util = {
 					}
 				}
 			},
-	
+
 			device : {
 				sprint : {
 					model : {
@@ -5918,7 +5923,7 @@ Bitcoin.Util = {
 					}
 				}
 			},
-	
+
 			os : {
 				windows : {
 					version : {
@@ -5935,73 +5940,73 @@ Bitcoin.Util = {
 				}
 			}
 		};
-	
-	
+
+
 		//////////////
 		// Regex map
 		/////////////
-	
-	
+
+
 		var regexes = {
-	
+
 			browser : [[
-	
+
 				// Presto based
 				/(opera\smini)\/((\d+)?[\w\.-]+)/i,                                 // Opera Mini
 				/(opera\s[mobiletab]+).+version\/((\d+)?[\w\.-]+)/i,                // Opera Mobi/Tablet
 				/(opera).+version\/((\d+)?[\w\.]+)/i,                               // Opera > 9.80
 				/(opera)[\/\s]+((\d+)?[\w\.]+)/i                                    // Opera < 9.80
-				
+
 				], [NAME, VERSION, MAJOR], [
-	
+
 				/\s(opr)\/((\d+)?[\w\.]+)/i                                         // Opera Webkit
 				], [[NAME, 'Opera'], VERSION, MAJOR], [
-	
+
 				// Mixed
 				/(kindle)\/((\d+)?[\w\.]+)/i,                                       // Kindle
 				/(lunascape|maxthon|netfront|jasmine|blazer)[\/\s]?((\d+)?[\w\.]+)*/i,
 																					// Lunascape/Maxthon/Netfront/Jasmine/Blazer
-	
+
 				// Trident based
 				/(avant\s|iemobile|slim|baidu)(?:browser)?[\/\s]?((\d+)?[\w\.]*)/i,
 																					// Avant/IEMobile/SlimBrowser/Baidu
 				/(?:ms|\()(ie)\s((\d+)?[\w\.]+)/i,                                  // Internet Explorer
-	
+
 				// Webkit/KHTML based
 				/(rekonq)((?:\/)[\w\.]+)*/i,                                        // Rekonq
 				/(chromium|flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt)\/((\d+)?[\w\.-]+)/i
 																					// Chromium/Flock/RockMelt/Midori/Epiphany/Silk/Skyfire/Bolt
 				], [NAME, VERSION, MAJOR], [
-	
+
 				/(yabrowser)\/((\d+)?[\w\.]+)/i                                     // Yandex
 				], [[NAME, 'Yandex'], VERSION, MAJOR], [
-	
+
 				/(comodo_dragon)\/((\d+)?[\w\.]+)/i                                 // Comodo Dragon
 				], [[NAME, /_/g, ' '], VERSION, MAJOR], [
-	
+
 				/(chrome|omniweb|arora|[tizenoka]{5}\s?browser)\/v?((\d+)?[\w\.]+)/i
 																					// Chrome/OmniWeb/Arora/Tizen/Nokia
 				], [NAME, VERSION, MAJOR], [
-	
+
 				/(dolfin)\/((\d+)?[\w\.]+)/i                                        // Dolphin
 				], [[NAME, 'Dolphin'], VERSION, MAJOR], [
-	
+
 				/((?:android.+)crmo|crios)\/((\d+)?[\w\.]+)/i                       // Chrome for Android/iOS
 				], [[NAME, 'Chrome'], VERSION, MAJOR], [
-	
+
 				/version\/((\d+)?[\w\.]+).+?mobile\/\w+\s(safari)/i                 // Mobile Safari
 				], [VERSION, MAJOR, [NAME, 'Mobile Safari']], [
-	
+
 				/version\/((\d+)?[\w\.]+).+?(mobile\s?safari|safari)/i              // Safari & Safari Mobile
 				], [VERSION, MAJOR, NAME], [
-	
+
 				/webkit.+?(mobile\s?safari|safari)((\/[\w\.]+))/i                   // Safari < 3.0
 				], [NAME, [MAJOR, mapper.str, maps.browser.oldsafari.major], [VERSION, mapper.str, maps.browser.oldsafari.version]], [
-	
+
 				/(konqueror)\/((\d+)?[\w\.]+)/i,                                    // Konqueror
 				/(webkit|khtml)\/((\d+)?[\w\.]+)/i
 				], [NAME, VERSION, MAJOR], [
-	
+
 				// Gecko based
 				/(navigator|netscape)\/((\d+)?[\w\.-]+)/i                           // Netscape
 				], [[NAME, 'Netscape'], VERSION, MAJOR], [
@@ -6011,7 +6016,7 @@ Bitcoin.Util = {
 				/(firefox|seamonkey|k-meleon|icecat|iceape|firebird|phoenix)\/((\d+)?[\w\.-]+)/i,
 																					// Firefox/SeaMonkey/K-Meleon/IceCat/IceApe/Firebird/Phoenix
 				/(mozilla)\/((\d+)?[\w\.]+).+rv\:.+gecko\/\d+/i,                    // Mozilla
-	
+
 				// Other
 				/(uc\s?browser|polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf)[\/\s]?((\d+)?[\w\.]+)/i,
 																					// UCBrowser/Polaris/Lynx/Dillo/iCab/Doris/Amaya/w3m/NetSurf
@@ -6021,44 +6026,44 @@ Bitcoin.Util = {
 				/(mosaic)[\/\s]((\d+)?[\w\.]+)/i                                    // Mosaic
 				], [NAME, VERSION, MAJOR]
 			],
-	
+
 			cpu : [[
-	
+
 				/(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i                     // AMD64
 				], [[ARCHITECTURE, 'amd64']], [
-	
+
 				/((?:i[346]|x)86)[;\)]/i                                            // IA32
 				], [[ARCHITECTURE, 'ia32']], [
-	
+
 				// PocketPC mistakenly identified as PowerPC
 				/windows\s(ce|mobile);\sppc;/i
 				], [[ARCHITECTURE, 'arm']], [
-	
+
 				/((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i                           // PowerPC
 				], [[ARCHITECTURE, /ower/, '', util.lowerize]], [
-	
+
 				/(sun4\w)[;\)]/i                                                    // SPARC
 				], [[ARCHITECTURE, 'sparc']], [
-	
+
 				/(ia64(?=;)|68k(?=\))|arm(?=v\d+;)|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
 																					// IA64, 68K, ARM, IRIX, MIPS, SPARC, PA-RISC
 				], [ARCHITECTURE, util.lowerize]
 			],
-	
+
 			device : [[
-	
+
 				/\((ipad|playbook);[\w\s\);-]+(rim|apple)/i                         // iPad/PlayBook
 				], [MODEL, VENDOR, [TYPE, TABLET]], [
-	
+
 				/(hp).+(touchpad)/i,                                                // HP TouchPad
 				/(kindle)\/([\w\.]+)/i,                                             // Kindle
 				/\s(nook)[\w\s]+build\/(\w+)/i,                                     // Nook
 				/(dell)\s(strea[kpr\s\d]*[\dko])/i                                  // Dell Streak
 				], [VENDOR, MODEL, [TYPE, TABLET]], [
-	
+
 				/\((ip[honed]+);.+(apple)/i                                         // iPod/iPhone
 				], [MODEL, VENDOR, [TYPE, MOBILE]], [
-	
+
 				/(blackberry)[\s-]?(\w+)/i,                                         // BlackBerry
 				/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|huawei|meizu|motorola)[\s_-]?([\w-]+)*/i,
 																					// BenQ/Palm/Sony-Ericsson/Acer/Asus/Dell/Huawei/Meizu/Motorola
@@ -6067,34 +6072,34 @@ Bitcoin.Util = {
 				], [VENDOR, MODEL, [TYPE, MOBILE]], [
 				/\((bb10);\s(\w+)/i                                                 // BlackBerry 10
 				], [[VENDOR, 'BlackBerry'], MODEL, [TYPE, MOBILE]], [
-	
+
 				/android.+((transfo[prime\s]{4,10}\s\w+|eeepc|slider\s\w+))/i       // Asus Tablets
 				], [[VENDOR, 'Asus'], MODEL, [TYPE, TABLET]], [
-	
+
 				/(sony)\s(tablet\s[ps])/i                                           // Sony Tablets
 				], [VENDOR, MODEL, [TYPE, TABLET]], [
-	
+
 				/(nintendo)\s([wids3u]+)/i                                          // Nintendo
 				], [VENDOR, MODEL, [TYPE, CONSOLE]], [
-	
+
 				/((playstation)\s[3portablevi]+)/i                                  // Playstation
 				], [[VENDOR, 'Sony'], MODEL, [TYPE, CONSOLE]], [
-	
+
 				/(sprint\s(\w+))/i                                                  // Sprint Phones
 				], [[VENDOR, mapper.str, maps.device.sprint.vendor], [MODEL, mapper.str, maps.device.sprint.model], [TYPE, MOBILE]], [
-	
+
 				/(htc)[;_\s-]+([\w\s]+(?=\))|\w+)*/i,                               // HTC
 				/(zte)-(\w+)*/i,                                                    // ZTE
 				/(alcatel|geeksphone|huawei|lenovo|nexian|panasonic|(?=;\s)sony)[_\s-]?([\w-]+)*/i
 																					// Alcatel/GeeksPhone/Huawei/Lenovo/Nexian/Panasonic/Sony
 				], [VENDOR, [MODEL, /_/g, ' '], [TYPE, MOBILE]], [
-	
+
 				/\s((milestone|droid[2x]?))[globa\s]*\sbuild\//i,                   // Motorola
 				/(mot)[\s-]?(\w+)*/i
 				], [[VENDOR, 'Motorola'], MODEL, [TYPE, MOBILE]], [
 				/android.+\s((mz60\d|xoom[\s2]{0,2}))\sbuild\//i
 				], [[VENDOR, 'Motorola'], MODEL, [TYPE, TABLET]], [
-	
+
 				/android.+((sch-i[89]0\d|shw-m380s|gt-p\d{4}|gt-n8000|sgh-t8[56]9))/i
 				], [[VENDOR, 'Samsung'], MODEL, [TYPE, TABLET]], [                  // Samsung
 				/((s[cgp]h-\w+|gt-\w+|galaxy\snexus))/i,
@@ -6103,45 +6108,45 @@ Bitcoin.Util = {
 				], [[VENDOR, 'Samsung'], MODEL, [TYPE, MOBILE]], [
 				/(sie)-(\w+)*/i                                                     // Siemens
 				], [[VENDOR, 'Siemens'], MODEL, [TYPE, MOBILE]], [
-	
+
 				/(maemo|nokia).*(n900|lumia\s\d+)/i,                                // Nokia
 				/(nokia)[\s_-]?([\w-]+)*/i
 				], [[VENDOR, 'Nokia'], MODEL, [TYPE, MOBILE]], [
-	
+
 				/android\s3\.[\s\w-;]{10}((a\d{3}))/i                               // Acer
 				], [[VENDOR, 'Acer'], MODEL, [TYPE, TABLET]], [
-	
+
 				/android\s3\.[\s\w-;]{10}(lg?)-([06cv9]{3,4})/i                     // LG
 				], [[VENDOR, 'LG'], MODEL, [TYPE, TABLET]], [
 				/((nexus\s4))/i,
 				/(lg)[e;\s-\/]+(\w+)*/i
 				], [[VENDOR, 'LG'], MODEL, [TYPE, MOBILE]], [
-	
+
 				/(mobile|tablet);.+rv\:.+gecko\//i                                  // Unidentifiable
 				], [TYPE, VENDOR, MODEL]
 			],
-	
+
 			engine : [[
-	
+
 				/(presto)\/([\w\.]+)/i,                                             // Presto
 				/(webkit|trident|netfront|netsurf|amaya|lynx|w3m)\/([\w\.]+)/i,     // WebKit/Trident/NetFront/NetSurf/Amaya/Lynx/w3m
 				/(khtml|tasman|links)[\/\s]\(?([\w\.]+)/i,                          // KHTML/Tasman/Links
 				/(icab)[\/\s]([23]\.[\d\.]+)/i                                      // iCab
 				], [NAME, VERSION], [
-	
+
 				/rv\:([\w\.]+).*(gecko)/i                                           // Gecko
 				], [VERSION, NAME]
 			],
-	
+
 			os : [[
-	
+
 				// Windows based
 				/(windows)\snt\s6\.2;\s(arm)/i,                                     // Windows RT
 				/(windows\sphone(?:\sos)*|windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i
 				], [NAME, [VERSION, mapper.str, maps.os.windows.version]], [
 				/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i
 				], [[NAME, 'Windows'], [VERSION, mapper.str, maps.os.windows.version]], [
-	
+
 				// Mobile/Embedded OS
 				/\((bb)(10);/i                                                      // BlackBerry 10
 				], [[NAME, 'BlackBerry'], VERSION], [
@@ -6154,10 +6159,10 @@ Bitcoin.Util = {
 				], [[NAME, 'Symbian'], VERSION],[
 				/mozilla.+\(mobile;.+gecko.+firefox/i                               // Firefox OS
 				], [[NAME, 'Firefox OS'], VERSION], [
-	
+
 				// Console
 				/(nintendo|playstation)\s([wids3portablevu]+)/i,                    // Nintendo/Playstation
-	
+
 				// GNU/Linux based
 				/(mint)[\/\s\(]?(\w+)*/i,                                           // Mint
 				/(joli|[kxln]?ubuntu|debian|[open]*suse|gentoo|arch|slackware|fedora|mandriva|centos|pclinuxos|redhat|zenwalk)[\/\s-]?([\w\.-]+)*/i,
@@ -6166,24 +6171,24 @@ Bitcoin.Util = {
 				/(hurd|linux)\s?([\w\.]+)*/i,                                       // Hurd/Linux
 				/(gnu)\s?([\w\.]+)*/i                                               // GNU
 				], [NAME, VERSION], [
-	
+
 				/(cros)\s[\w]+\s([\w\.]+\w)/i                                       // Chromium OS
 				], [[NAME, 'Chromium OS'], VERSION],[
-	
+
 				// Solaris
 				/(sunos)\s?([\w\.]+\d)*/i                                           // Solaris
 				], [[NAME, 'Solaris'], VERSION], [
-	
+
 				// BSD based
 				/\s([frentopc-]{0,4}bsd|dragonfly)\s?([\w\.]+)*/i                   // FreeBSD/NetBSD/OpenBSD/PC-BSD/DragonFly
 				], [NAME, VERSION],[
-	
+
 				/(ip[honead]+)(?:.*os\s*([\w]+)*\slike\smac|;\sopera)/i             // iOS
 				], [[NAME, 'iOS'], [VERSION, /_/g, '.']], [
-	
+
 				/(mac\sos\sx)\s?([\w\s\.]+\w)*/i                                    // Mac OS
 				], [NAME, [VERSION, /_/g, '.']], [
-	
+
 				// Other
 				/(haiku)\s(\w+)/i,                                                  // Haiku
 				/(aix)\s((\d)(?=\.|\)|\s)[\w\.]*)*/i,                               // AIX
@@ -6193,17 +6198,17 @@ Bitcoin.Util = {
 				], [NAME, VERSION]
 			]
 		};
-	
-	
+
+
 		/////////////////
 		// Constructor
 		////////////////
-	
-	
+
+
 		var UAParser = function (uastring) {
-	
+
 			var ua = uastring || ((window && window.navigator && window.navigator.userAgent) ? window.navigator.userAgent : EMPTY);
-	
+
 			if (!(this instanceof UAParser)) {
 				return new UAParser(uastring).getResult();
 			}
@@ -6241,14 +6246,14 @@ Bitcoin.Util = {
 			};
 			this.setUA(ua);
 		};
-	
-	
+
+
 		///////////
 		// Export
 		//////////
-	
-	
-		// check js environment 
+
+
+		// check js environment
 		if (typeof(exports) !== UNDEF_TYPE) {
 			// nodejs env
 			if (typeof(module) !== UNDEF_TYPE && module.exports) {
@@ -6257,7 +6262,7 @@ Bitcoin.Util = {
 			exports.UAParser = UAParser;
 		} else {
 			// browser env
-			window.UAParser = UAParser;        
+			window.UAParser = UAParser;
 			// requirejs env (optional)
 			if (typeof(define) === FUNC_TYPE && define.amd) {
 				define(function () {
@@ -6281,7 +6286,7 @@ Bitcoin.Util = {
 				};
 			}
 		}
-	
+
 	})(this);
 	</script>
 
@@ -6292,7 +6297,7 @@ Bitcoin.Util = {
 
 
 	<style type="text/css">
-			
+
 		/*	import ubuntu mono bold as our font for display public & private keys.
 			NOTE: This font has been stripped down such that it only includes characters A-Z, a-Z, and 0-9 */
 		@font-face {
@@ -6305,7 +6310,7 @@ Bitcoin.Util = {
 			font-weight: bold;
 			font-style: normal;
 		}
-		
+
 		.right { text-align: right; }
 		.walletarea { display: none; border-top: 2px solid #f7931a; }
 		.keyarea { font-family: Courier New; height: 110px; text-align: left; position: relative; padding: 5px; }
@@ -6320,19 +6325,19 @@ Bitcoin.Util = {
 		.faqs ol { padding: 0 0 0 25px; }
 		.faqs li { padding: 3px 0; }
 		body { margin-top: 0; font-family: Arial; background-image:url(images/webpage-background.png); background-repeat: repeat-y; background-position: center; background-color: #e2f9bd;}
-		
+
 		h1 { font-size: 24px; font-weight: 100; color: #090; margin:0 0 10px 0; padding:0; }
-		
+
 		a, a:visited { text-decoration: none; color: #ff6c00; }
 		a:hover {color: #0000FF; text-decoration: underline;}
-		
-		
+
+
 		#main { position: relative; margin: 0px auto; width: 1010px; color: #444; } /* removed text-align: center; */
 		#logoback {  background-image:url(images/logo.png); background-position: top left; background-repeat: no-repeat; }
 		#generate { font-family: Courier New; height: 158px; text-align: left; position: relative; padding: 5px; border: none; }
 		#generate span { padding: 5px 5px 0 5px; }
 		#menu { visibility: hidden; font-size: 90%; padding: 0 12px;}
-		
+
 		#culturemenu { text-align: right; padding: 10px 20px; font-size: 12px; }
 
 		#culturemenu { text-align: right; padding: 10px 20px; font-size: 12px;}
@@ -6348,80 +6353,80 @@ Bitcoin.Util = {
 		#printeradjust a:hover span { background-color: #CCFFCC; }
 		#printeradjust a, #printeradjust a:hover {text-decoration: none;}
 		#printeradjust input { text-align: center; margin: 0 2px;}
-		
-		
+
+
 		#paperarea { min-height: 120px; display: none; }
 		#paperarea .keyarea { border: 2px solid #f7931a; border-top: 0; }
-		
+
 		/* alphanum for public-private keys*/
 		#paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: ubuntu_mono_bold, Arial, Helvetica, sans-serif; padding: 0; margin: 0; font-size: 13px;}
-		
+
 		#paperarea .artwallet .papersvg { width: 1010px; height: 331px; border: 0; margin: 0; padding: 0; left: 0; }
-		#paperarea .artwallet .qrcode_public { top: 120px; left: 41px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF; 
-		                                       padding: 5px 5px 2px 5px; } 
-		#paperarea .artwallet .qrcode_private { top: 105px; left: 827px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF; 
+		#paperarea .artwallet .qrcode_public { top: 120px; left: 41px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+		                                       padding: 5px 5px 2px 5px; }
+		#paperarea .artwallet .qrcode_private { top: 105px; left: 827px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
 		                                        padding: 5px 5px 2px 5px; }
-		#paperarea .artwallet .btcaddress  
+		#paperarea .artwallet .btcaddress
 		{
 		    position: absolute; top: 275px; left: 40px; z-index: 100; background-color: transparent;
 		    color: #1739ad; margin: 0;
-				-webkit-transform-origin:top left; 
+				-webkit-transform-origin:top left;
 				/* -webkit-transform:rotate(-90deg); */
-				-moz-transform-origin:top left;    
+				-moz-transform-origin:top left;
 				/*-moz-transform:rotate(-90deg); */
-				-ms-transform-origin:top left;     
+				-ms-transform-origin:top left;
 				/*-ms-transform:rotate(-90deg);*/
-				-o-transform-origin:top left;      
+				-o-transform-origin:top left;
 				/*-o-transform:rotate(-90deg);*/
-				transform-origin:top left;         
+				transform-origin:top left;
 				/*transform:rotate(-90deg);*/
-		} 
+		}
 
-		#paperarea .artwallet .dupbtcaddress  
+		#paperarea .artwallet .dupbtcaddress
 		{
 		    position: absolute; top: 45px; left: 40px; z-index: 100; background-color: transparent;
 		    color: #1739ad; margin: 0;
 				/* -webkit-transform-origin:top left; */
-				-webkit-transform:rotate(-180deg); 
-				/* -moz-transform-origin:top left; */   
-				-moz-transform:rotate(-180deg); 
-				/* -ms-transform-origin:top left; */    
+				-webkit-transform:rotate(-180deg);
+				/* -moz-transform-origin:top left; */
+				-moz-transform:rotate(-180deg);
+				/* -ms-transform-origin:top left; */
 				-ms-transform:rotate(-180deg);
-				/* -o-transform-origin:top left; */     
+				/* -o-transform-origin:top left; */
 				-o-transform:rotate(-180deg);
-				/* transform-origin:top left; */        
+				/* transform-origin:top left; */
 				transform:rotate(-180deg);
-		} 
+		}
 
-		#paperarea .artwallet .btcprivwif  
+		#paperarea .artwallet .btcprivwif
 		{
 		    position: absolute; top: 245px; left: 610px; z-index: 100; background-color: transparent;
-		    color: #000000; margin: 0;  
-				-webkit-transform-origin:top left; 
+		    color: #000000; margin: 0;
+				-webkit-transform-origin:top left;
 				/*-webkit-transform:rotate(-90deg);*/
-				-moz-transform-origin:top left;    
+				-moz-transform-origin:top left;
 				/*-moz-transform:rotate(-90deg);*/
-				-ms-transform-origin:top left;     
+				-ms-transform-origin:top left;
 				/*-ms-transform:rotate(-90deg);*/
-				-o-transform-origin:top left;      
+				-o-transform-origin:top left;
 				/*-o-transform:rotate(-90deg);*/
-				transform-origin:top left;         
+				transform-origin:top left;
 				/*transform:rotate(-90deg);*/
 		}
 
-		#paperarea .artwallet .dupbtcprivwif  
+		#paperarea .artwallet .dupbtcprivwif
 		{
 		    position: absolute; top: 75px; left: 610px; z-index: 100; background-color: transparent;
-		    color: #000000; margin: 0;  
-				/* -webkit-transform-origin:top left; */ 
+		    color: #000000; margin: 0;
+				/* -webkit-transform-origin:top left; */
 				-webkit-transform:rotate(-180deg);
-				/* -moz-transform-origin:top left; */   
+				/* -moz-transform-origin:top left; */
 				-moz-transform:rotate(-180deg);
-				/* -ms-transform-origin:top left; */    
+				/* -ms-transform-origin:top left; */
 				-ms-transform:rotate(-180deg);
-				/* -o-transform-origin:top left; */      
+				/* -o-transform-origin:top left; */
 				-o-transform:rotate(-180deg);
-				/* transform-origin:top left; */    
+				/* transform-origin:top left; */
 				transform:rotate(-180deg);
 		}
 
@@ -6474,14 +6479,14 @@ Bitcoin.Util = {
 		.instructionsarea { padding: 0 25px; }
 		.instructionsarea { font-size: 12px; line-height: 18px; }
 		.instructionsarea li { padding-bottom: 8px; list-style: none; }
-		
+
 		.highlighted { font-size: 14px; padding: 8px; background-color: #ebfdbf;}
-		
-		#browserinfo { text-align: center; } 
+
+		#browserinfo { text-align: center; }
 		.englishjson { text-align: center; padding: 40px 0 20px 0; }
 		.unittests { text-align: center; }
 		.unittests div { width: 894px; font-family: monospace; text-align: left; margin: auto; padding: 5px; border: 1px solid black; }
-		
+
 		/* IE8 */
 		.qrcodetable { border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse; }
 		.qrcodetddark { border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse; padding: 0; margin: 0; width: 2px; height: 2px; background-color: #000000; }
@@ -6498,44 +6503,44 @@ Bitcoin.Util = {
 		}
 		#generatelabelmovemouse { margin: 30px 150px; padding: 30px; font-weight: bold; text-align: center; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;background-color:#F0FED0;-webkit-box-shadow: #B3B3B3 1px 1px 1px;-moz-box-shadow: #B3B3B3 1px 1px 1px; box-shadow: #B3B3B3 1px 1px 1px; }
 		#generatelabelbitcoinaddress { text-align: center;}
-		
-		@media screen 	
+
+		@media screen
 		{
 			#tagline { margin: 10px 0 0 250px; font-style: italic; font-size: 18px; color: #666; }
 			#tagline span {padding-left: 10px; font-size: 11px; color: #999;}
 			#tagsite { margin: 5px 0 20px 252px; font-size: 14px; color: #666; }
-			
+
 
 			#tagwarning { position: absolute; left: 250px; top: 25px; font-size: 12px; color: red; }
 			.menu { text-align: left; }
-			.menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #e2f9bd; 
+			.menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #e2f9bd;
 						 color: #060; font-size: 12px;
-						 border-top: 2px solid #f7931a; 
-						 border-left: 2px solid #f7931a; 
-						 border-right: 2px solid #f7931a; 
-						 border-bottom: 2px solid #e2f9bd; 
+						 border-top: 2px solid #f7931a;
+						 border-left: 2px solid #f7931a;
+						 border-right: 2px solid #f7931a;
+						 border-bottom: 2px solid #e2f9bd;
 						 padding: 4px 8px; margin: 0 2px 0 0; position: relative; top: 2px; z-index: 110; cursor: pointer; }
 			.menu .tab:hover { color: #090; }
 			.menu .tab.selected { background-color: #FFF; border-bottom: 4px solid #FFF; cursor: default; font-weight: bold; }
 			.menu .tab.selected:hover { color: #090; }
-			
+
 			.menu #printeradjust { float: right; text-align: right; margin-top: 5px; } /* zoom & shift */
-			
+
 			.pagebreak { height: 50px; }
-			.commands { padding: 10px 0 20px 10px; margin-bottom: 0;} 
-			.commands span { padding: 0 10px; } 
-			.commands span.print { float: right; padding-top: 10px;} 
+			.commands { padding: 10px 0 20px 10px; margin-bottom: 0;}
+			.commands span { padding: 0 10px; }
+			.commands span.print { float: right; padding-top: 10px;}
 			.commands span.right { float: right; }
 			.expandable { padding: 10px 15px; text-align: left; cursor: pointer; }
-			
+
 			.commands p.instructions { width: 600px; float: left; font-size: 13px; }
-			
 
 
 
-			#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; } 
+
+			#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; }
 			#bulklimit { width: 45px; }
-			
+
 			.footer { font-family: Arial; font-size: 90%; clear: both; padding: 10px 0 10px 0; margin: 50px 20px; color: #999; border-top: 1px dotted #999;}
 			.footer div span.item { padding: 5px; }
 			.footer .authorbtc { float: left; width: 470px; }
@@ -6549,9 +6554,9 @@ Bitcoin.Util = {
 			#siginfo { margin: 10px 200px; border: 1px solid #666; padding: 10px; background-color: #999; color: #FFF; z-index: 10000;}
 			#siginfo a, #siginfo a:visited { color: #EFFED3;}
 			#siginfo .closeme { float: right; padding: 0 0 30px 20px; margin: 0;}
-			
+
 			#supplyKeys { float: left; background-color: #EEFED0; border: 1px solid #CCCCCC; padding: 8px; }
-		}		
+		}
 
 		@media print
 		{
@@ -6574,24 +6579,24 @@ Bitcoin.Util = {
     	<div id="logoback">
           	<div id="culturemenu">
               <!--
-              <span><a href="?culture=en" id="cultureen" class="selected">English</a></span> | 
-              <span><a href="?culture=es" id="culturees">Español</a></span> | 
+              <span><a href="?culture=en" id="cultureen" class="selected">English</a></span> |
+              <span><a href="?culture=es" id="culturees">Español</a></span> |
               <span><a href="?culture=fr" id="culturefr">Français</a></span> -->
               &nbsp;
           	</div>
 			<div id="tagline">Open Source JavaScript Bitcoin Wallet Generator <span>Updated December 6, 2013</span></div>
 			<div id="tagsite">For help, security tips, or wallet making supplies visit <a href="https://bitcoinpaperwallet.com">bitcoinpaperwallet.com</a></div>
             <div id="tagwarning"></div>
-        
+
 		<div class="menu" id="menu">
         	<div id="printeradjust">
 				Zoom:
-                <a href="#" onClick="printZoom(-1); return(false);"><span>-</span></a><input name="printerzoom" id="printerzoom" size="2" value="5" onChange="updateCalibrationInfo();" /><a href="#" onClick="printZoom(1); return(false);"><span>+</span></a> 
+                <a href="#" onClick="printZoom(-1); return(false);"><span>-</span></a><input name="printerzoom" id="printerzoom" size="2" value="5" onChange="updateCalibrationInfo();" /><a href="#" onClick="printZoom(1); return(false);"><span>+</span></a>
                 &nbsp;
-				Horizontal Shift: 
-                <a href="#" onClick="printShift(-1); return(false);"><span>-</span></a><input name="printershift" id="printershift" size="2" value="5" onChange="updateCalibrationInfo();" /><a href="#" onClick="printShift(1); return(false);"><span>+</span></a> 
+				Horizontal Shift:
+                <a href="#" onClick="printShift(-1); return(false);"><span>-</span></a><input name="printershift" id="printershift" size="2" value="5" onChange="updateCalibrationInfo();" /><a href="#" onClick="printShift(1); return(false);"><span>+</span></a>
             </div>
-            
+
 			<div class="tab selected" id="landwallet" onClick="ninja.tabSwitch(this);">Instructions</div>
 			<div class="tab" id="calibratewallet" onClick="ninja.tabSwitch(this);">1. Calibrate Printer</div>
 			<div class="tab" id="paperwallet" onClick="ninja.tabSwitch(this);">2. Print Front</div>
@@ -6601,24 +6606,24 @@ Bitcoin.Util = {
 
 
 		</div><!-- end logoback -->
-		
+
 		<div id="generate">
 			<div id="generatelabelmovemouse"><blink>Please move your mouse around...</blink></div>
 			<p id="generatelabelbitcoinaddress">(This helps to generate more random &amp; secure bitcoin addresses.)</p>
 		</div>
 
 		<div id="wallets">
-        
-        
-        
-			<div id="landarea" class="walletarea">	
+
+
+
+			<div id="landarea" class="walletarea">
 				<div id="landcommands" class="commands">
 					&nbsp;
 				</div>
 				<div class="instructionsarea">
 					<div class="notes">
 						<h1><span id="instructions0">Welcome! Let's print out a beautiful and secure wallet for your bitcoins.</span></h1>
-						                        
+
 						<span id="instructions1"><em>Here's an overview of what will happen, step by step.</em></span>
 
 						<br /><br />
@@ -6657,10 +6662,10 @@ Bitcoin.Util = {
 							 case 'file:':
 							   document.write('<span style="color: #009900;">&#10004; You are running this generator from your own download.</span><br />Tip: Make 100% sure you are offline by trying <a href="http://google.com" target="_blank">google.com</a></span>');
 							   break;
-							 default: 
+							 default:
 						  }
                         </script>
-                        
+
                         </li>
                         <li>
                         <script language="javascript">
@@ -6673,9 +6678,9 @@ Bitcoin.Util = {
                         </li>
                         <li><strong>?</strong> Are you using a secure operating system guaranteed to be free of spyware and viruses, for example, an <a href="https://bitcoinpaperwallet.com/#purchase" target="_blank">Ubuntu LiveCD</a>?</li>
                         </ul>
-                        
+
                         <p><a href="https://bitcoinpaperwallet.com/#security" target="_blank">More security tips</a></p>
-                        
+
                         </div>
 
 						<span id="instructions2"><b>Step 1: Calibrate Printer</b><br />
@@ -6683,23 +6688,23 @@ Bitcoin.Util = {
 						<br /><br />
 						<span id="instructions3"><b>Step 2: Print Front</b><br />
                         Next we'll print out the front side of your wallet. A public address and private key will automatically be generated, or you can supply your own key if you are using 'vanitygen' or some other random key generator.</span>
-						<br /><br />	
+						<br /><br />
 						<span id="instructions4"><b>Step 3: Print Back</b><br />
                         Then you will put the same page back in your printer (but flipped over) to print out the back side of your wallet. This isn't just for good looks: the back side design includes additional tamper-resistant safeguards.</span>
-						<br /><br />	
+						<br /><br />
 						<span id="instructions5"><b>Step 4: Cut, Fold, Seal &amp; Fund</b><br />
                         Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer bitcoins from your online holdings to your new wallet.</span>
                         <br /><br />
 						<span><a href="http://www.youtube.com/watch?v=a47rrYBWjWQ" target="_blank" class="nicerButton" style="width: 400px;">90 second tutorial video on YouTube &raquo;</a></span>
-						<br /><br />	
+						<br /><br />
 						<span><a href="https://bitcoinpaperwallet.com/#purchase" target="_blank" class="nicerButton" style="width: 400px;">Purchase hologram stickers and/or zip-sealing bags &raquo;</a></span>
-                                                
+
 					</div>
 				</div>
 			</div><!-- end landarea -->
-                    
-        
-        
+
+
+
 			<div id="calibratearea" class="walletarea">
 				<div class="commands">
 					<div id="calibratecommands">
@@ -6714,12 +6719,12 @@ Bitcoin.Util = {
 				<div id="calibrationinfo">Zoom / Shift : Default</div>
 				<img id="calibratesvg" class="calibratesvg" src="./images/calibrate-300dpi.jpg">
 				<div id="browserinfo"></div><!-- this gets set onLoad -->
-                
+
 			</div><!-- end calibratearea -->
-            
-            
-            
-            
+
+
+
+
 
 			<div id="paperarea" class="walletarea">
 				<div id="papercommands" class="commands">
@@ -6728,20 +6733,20 @@ Bitcoin.Util = {
                     	<span><label id="paperlabeladdressesperpage">Addresses per page:</label> <input type="text" id="paperlimitperpage" /></span>
 						<span><label id="paperlabeladdressestogenerate">Addresses to generate:</label> <input type="text" id="paperlimit" /></span>
                     </div>
-                    
+
                     <div id="keyButtons" style="display: block; float: left;">
                     <input type="button" id="papergenerate" value="Random-generate new keys" onClick="ninja.wallets.paperwallet.build(document.getElementById('paperlimit').value * 1, document.getElementById('paperlimitperpage').value * 1, !document.getElementById('paperart').checked); printCounter=0;" />
 
                     <input type="button" id="papergenerate" value="Supply my own key or vanity address..." onClick="document.getElementById('keyButtons').style.display='none'; document.getElementById('supplyKeys').style.display='block';" />
                     </div>
-                    
+
                     <div id="supplyKeys" style="display: none;">
                     <p style="padding: 0; margin: 0;"><input placeholder="Paste your PRIVATE key here" id="suppliedPrivateKey" name="suppliedPrivateKey" size="75" spellcheck="false" style="font-family: ubuntu_mono_bold, 'Courier New', Courier, monospace;" />&nbsp;<input type="button" id="papergenerate" value="Test &amp; Apply &raquo;" onClick="testAndApplyVanityKey();" />
                     </p>
                     <p style="margin: 0; padding:0;"><a href="#" style="font-size: 11px;" onClick="document.getElementById('keyButtons').style.display='block'; document.getElementById('supplyKeys').style.display='none';">&laquo; Back</a></p>
                     </div>
-                    
-                    
+
+
 					<span class="print">
                     <a href="#" class="nicerButton" onClick="doPrint('generate');">Print Wallet Front</a>
                     </span>
@@ -6749,13 +6754,13 @@ Bitcoin.Util = {
 				</div>
 				<div id="paperkeyarea"></div>
 			</div><!-- end paperarea -->
-            
+
 
 
 
 
 			<div id="backarea" class="walletarea">
-				<div class="commands"> 
+				<div class="commands">
 					<div id="backcommands">
 						<p id="backinstructions" class="instructions highlighted">Reload the front page into your printer first. And don't forget to print in LANDSCAPE mode!</p>
 						<span class="print">
@@ -6764,14 +6769,14 @@ Bitcoin.Util = {
 					</div>
                     <br clear="all" />
 				</div>
-                
+
 				<img id="backsvg1" class="backsvg" src="./images/back-300dpi.jpg">
-                
+
 			</div><!-- end backarea -->
 
 
 
-			<div id="foldarea" class="walletarea">	
+			<div id="foldarea" class="walletarea">
 				<div id="foldcommands" class="commands">
 					&nbsp;
 				</div>
@@ -6788,38 +6793,43 @@ Bitcoin.Util = {
                         <br />
 						<span id="instructions23">The final wallet will be a rectangle shape with the more narrow private key area folded over it, like this:</span>
 						<br />
-                        
+
                         <img src="images/finished-sample.jpg" width="400" height="203" alt="Sample Wallet">
-                        
-                        <br />	
+
+                        <br />
                         <br />
 						<span id="instructions13">Finally seal your wallet by placing two strips of sturdy <strong>light-blocking</strong> tape over the top and bottom edges of the private (folded) area. A zip-seal bag will keep it safe from moisture (especially important for inkjet prints.)</span>
-						<br /><br />	
-                        <a href="https://bitcoinpaperwallet.com/#purchase" target="_blank" class="nicerButton" style="width: 400px;">Purchase hologram stickers and/or zip-sealing bags &raquo;</a>	
+						<br /><br />
+                        <a href="https://bitcoinpaperwallet.com/#purchase" target="_blank" class="nicerButton" style="width: 400px;">Purchase hologram stickers and/or zip-sealing bags &raquo;</a>
 						<br /><br />
                         <img src="images/finished-sample-sealed.jpg" width="400" height="203" alt="Sealed Wallet">
 
-						<br /><br />	
+						<br /><br />
 
 						<h1><span id="instructions16">How to add funds to your wallet:</span></h1>
 
 						<span id="instructions17">Send bitcoins to the address (or QR code) where your wallet says "PUBLIC ADDRESS".</span>
-						<br /><br />	
-                        
+						<br /><br />
+
 						<h1><span id="instructions18">How to withdraw funds from your wallet:</span></h1>
 
 						<span id="instructions19">You should expect to withdraw the entire balance of the wallet by importing it (or "sweeping" it) to a live wallet, e.g. a Bitcoin wallet application or online service like blockchain.info or coinbase.com. <a href="https://bitcoinpaperwallet.com/#security" target="_blank">Click here for important tips on withdrawing funds from your wallet &raquo;</a></span>
-                        
+
 					</div>
 				</div>
 			</div><!-- end landarea -->
 
-            
-            
+
+
 		</div><!-- *** end wallets *** -->
 
 		<div id="footer" class="footer">
 			<div class="authorbtc">
+				<div>
+					<span class="item" id="footerlabeldonations"><b>Doge Donations</b></span>
+                    <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
+                    <strong>Doge Paper Wallet</strong>:&nbsp; DDhDcKw2gMsr2RJSbeB91Nthp1UhSJgVAW<br /></span>
+                </div>
 				<div>
 					<span class="item" id="footerlabeldonations"><b>Bitcoin Donations</b></span>
                     <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
@@ -6829,11 +6839,11 @@ Bitcoin.Util = {
 				</div>
 			</div>
 			<div class="authorpgp">
-            
+
                 <div id="siginfo" style="display: none; position: absolute; top: -300px;">
                   <p class="closeme"><a href="#" onClick="document.getElementById('siginfo').style.display='none'; return(false);">X</a></p>
-  
-                    After downloading and extracting the <a href="https://github.com/cantonbecker/bitcoinpaperwallet" target="_blank">ZIP package</a> for this generator, you should find a file named <b>generate-wallet.html.sig</b> 
+
+                    After downloading and extracting the <a href="https://github.com/cantonbecker/bitcoinpaperwallet" target="_blank">ZIP package</a> for this generator, you should find a file named <b>generate-wallet.html.sig</b>
                     which you can use to:
                     <ol><li> verify that <strong>generate-wallet.html</strong> hasn't been tampered with, and</li>
                     <li>get proof that it really was authored by Canton Becker (canton@gmail.com) whose public key and fingerprint can be confirmed at <a href="http://cantonbecker.com">cantonbecker.com</a>, bitcointalk.org, etc.</li>
@@ -6849,23 +6859,23 @@ Bitcoin.Util = {
                 <span class="item" style="font-size: 75%;"><a href="https://bitcoinpaperwallet.com/#security" target="_blank">For extra security</a>, do not run this generator directly from the bitcoinpaperwallet.com website.<br />
                 Download the generator and run the HTML as a local file in your browser instead.</span>
 				<span class="item"><a href="https://github.com/cantonbecker/bitcoinpaperwallet" target="_blank" id="footerlabelgithub"><strong>Download</strong> (GitHub ZIP file)</a></span>
-                
+
                 <span class="item" id="footerlabeltests" style="font-size: 75%;"><a href="?unittests=1">Run local encode/decode unit tests</a></span>
 
 				<span class="item" id="footerlabelsig" style="font-size: 75%;"><a href="#" onClick="document.getElementById('siginfo').style.display='block'; return(false);">Validate PGP/GPG signature</a></span>
-                
+
 			</div>
 			<div class="copyright">
-				<span id="footerlabelcopyright1">&copy; Copyright 2013 Canton Becker (<a href="mailto:canton@gmail.com">canton@gmail.com</a>) and Pointbiz/bitaddress.org</span>
+				<span id="footerlabelcopyright1">&copy; Copyright 2013 Marcos Ojeda (<a href="mailto:marcos@generic.cx">marcos@generic.cx</a>), Canton Becker and Pointbiz/bitaddress.org</span>
 				<span id="footerlabelcopyright2">JavaScript copyrights are included in the source.</span>
-				<span id="footerlabelnowarranty">No warranty.</span><br />
+				<span id="footerlabelnowarranty"><strong>No warranty.</strong></span><br />
 
 			</div>
 		</div>
 	</div>
 
 	<script type="text/javascript">
-	
+
 		// bitaddress.org code -- though significantly modified for this implementation.
 		// For the original unmolested version of this code see
 		// https://github.com/pointbiz/bitaddress.org
@@ -7056,7 +7066,7 @@ Bitcoin.Util = {
 				return canvas;
 			},
 
-			// generate a QRCode and return it's representation as an Html table 
+			// generate a QRCode and return it's representation as an Html table
 			createTableHtml: function (text) {
 				var typeNumber = ninja.qrCode.getTypeNumber(text);
 				var qr = new QRCode(typeNumber, QRCode.ErrorCorrectLevel.H);
@@ -7079,7 +7089,7 @@ Bitcoin.Util = {
 			},
 
 			// show QRCodes with canvas OR table (IE8)
-			// parameter: keyValuePair 
+			// parameter: keyValuePair
 			// example: { "id1": "string1", "id2": "string2"}
 			//		"id1" is the id of a div element where you want a QRCode inserted.
 			//		"string1" is the string you want encoded into the QRCode.
@@ -7188,7 +7198,7 @@ Bitcoin.Util = {
 					"papergenerate": "Generar",
 					"paperprint": "Imprimir"
 				},
-					
+
 				"fr": {
 					// javascript alerts or messages
 					"paperlabelbitcoinaddress": "Adresse Bitcoin:",
@@ -7952,11 +7962,11 @@ Bitcoin.Util = {
 	</script>
 
 	<script type="text/javascript">
-	
+
 		/********************************************************
 		 Brand new JS functions added for bitcoinpaperwallet.com
 		 ********************************************************/
-	
+
     	var inlineMediaStyle = null;
 
 		function printZoom (changeBy) { /* handle +/- buttons for print zoom */
@@ -7973,8 +7983,8 @@ Bitcoin.Util = {
 
 		// apply the printer zoom & shift values as !important <head> styles
 		// thanks http://stackoverflow.com/questions/798535/changing-media-specific-css-properties-from-javascript
-		function updateCalibrationInfo() { 
- 
+		function updateCalibrationInfo() {
+
 			var currentZoom = document.getElementById("printerzoom").value;
 			var currentShift = document.getElementById("printershift").value;
 			// first write values onto printable area for reference
@@ -7986,40 +7996,40 @@ Bitcoin.Util = {
 			printerStyle.setAttribute('media', 'print');
 			printerStyle.appendChild(document.createTextNode('body { width: ' + ( 950 + (currentZoom * 10)) + 'px !important;} #main { left: ' + ((currentShift * 5)) + 'px !important;}'));
 
-			if (inlineMediaStyle != null) { 
+			if (inlineMediaStyle != null) {
 				head.replaceChild(printerStyle, inlineMediaStyle)
 			} else {
 				head.appendChild(printerStyle);
 			}
 			inlineMediaStyle = printerStyle;
 		}
-		
+
 		var printCounter=0;
 		var landscapeAlert=0;
-		
+
 		function doPrint(myContext) { /* What to do anytime a print button is clicked */
 			window.landscapeAlert ++;
 			updateCalibrationInfo();
 			if (window.landscapeAlert == 1) {
-				alert ('Important note: This design requires that you set your printer to output in LANDSCAPE (wide) format.');	
+				alert ('Important note: This design requires that you set your printer to output in LANDSCAPE (wide) format.');
 			}
-			
+
 			if (myContext == 'generate') {
 				window.printCounter ++;
 				if (window.printCounter == 2) {
 					alert (" *** WARNING *** WARNING *** WARNING *** \n\nYou are about to print a second wallet with the same set of keys. \n\nUnless you intended to make a backup wallet, cancel this print job and generate a fresh set of keys.");
 				}
 			}
-			window.print();	
+			window.print();
 		}
-		
+
 		function testAndApplyVanityKey() { /* Verify that a self-entered key is valid, and compute the corresponding public address, render the wallet. */
 			var suppliedKey = document.getElementById('suppliedPrivateKey').value;
 			suppliedKey = suppliedKey.trim(); // in case any spaces or whitespace got pasted in
 			document.getElementById('suppliedPrivateKey').value = suppliedKey;
 			if (!ninja.privateKey.isPrivateKey(suppliedKey)) {
 				alert ('*** INVALID KEY! ***\r\rThis should be the private "WIF" Wallet Import Format key -- not the public key (or "Vanity Key") itself. These always start with the number 5 and look something like this:\r\r5HuzK5hG43U7v53R7REt4Eu33BsVfhm86PA3Q6iANs13kwqUgSx');
-			} else {			
+			} else {
 				var computedPublicAddress = new Bitcoin.ECKey(suppliedKey).getBitcoinAddress();
 				alert ('OK! This is a valid private key whose public address is:\r\r'+computedPublicAddress);
 				ninja.wallets.paperwallet.showArtisticWallet(1, computedPublicAddress, suppliedKey);
@@ -8037,21 +8047,21 @@ Bitcoin.Util = {
 			txt+=result.os.name + " version " + result.os.version + " (" + result.cpu.architecture + ")<br />";
 			txt += "</p>";
 			document.getElementById("browserinfo").innerHTML=txt;
-			
+
 			// some common printer calibration settings here
 			if (result.browser.name == 'Safari') { // OS X Safari
 				document.getElementById("printerzoom").value = 5;
 				document.getElementById("printershift").value = 6;
-			} else if (result.browser.name == 'Chrome' && result.os.name == 'Mac OS X') { 
+			} else if (result.browser.name == 'Chrome' && result.os.name == 'Mac OS X') {
 				document.getElementById("printerzoom").value = 3;
 				document.getElementById("printershift").value = 3;
 			} else if (result.browser.name == 'Firefox' && result.os.name == 'Ubuntu') { // live CD?
 				document.getElementById("printerzoom").value = 2;
 				document.getElementById("printershift").value = 3;
-			} else if (result.browser.name == 'Iceweasel' && result.os.name == 'Debian') { 
+			} else if (result.browser.name == 'Iceweasel' && result.os.name == 'Debian') {
 				document.getElementById("printerzoom").value = 1.8;
 				document.getElementById("printershift").value = 2.9;
-			} else if (result.browser.name == 'IE' && result.os.name == 'Windows') { 
+			} else if (result.browser.name == 'IE' && result.os.name == 'Windows') {
 				document.getElementById("printerzoom").value = 5;
 				document.getElementById("printershift").value = 6;
 			}
