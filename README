@@ -1,10 +1,41 @@
-**** Wow. Very ZIP FILE. do want? ********************************************
+**** Wow. Very ZIP FILE. do want? ******************-------------------------->
 such browsing https://github.com/nsfmc/paperwallet
-so ease. very button. "Download ZIP". look. right ----->
-*******************************************************************************
+so ease. very button. "Download ZIP". look. right   -------------------------->
+****************************************************-------------------------->
 
 
 very fork. so bitcoinpaperwallet.com, such improvement!
+JavaScript powered offline bitcoin address generator.
+
+*** SUCH AUTHENTICITY ***
+
+wow. generate-wallet.html.sig much useful
+
+* how proof generate-wallet.html not tamper.
+* wow. such fork. very commiter. Marcos Ojeda (marcos@generic.cx)
+  so nerd. https://generic.cx/pgp.html
+
+so shell. nice command.
+
+  gpg --recv-key 9B7C45A7
+  gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
+
+such signature. very fingerprint. https://generic.cx/pgp.html
+
+so warnings "This key is not certified, there is no indication that
+the key belongs to the owner" pls ignore. serious. such normal.
+
+- wow. marcos
+very doge DDhDcKw2gMsr2RJSbeB91Nthp1UhSJgVAW
+such fiat 12hejef8yqrjrVFvA1nyM9tJGVKAnYYFDf
+
+------------------------------------------------------------------
+--- The original bitcoinpaperwallet.com README continues below ---
+------------------------------------------------------------------
+
+*** bitcoinpaperwallet.com ***
+
+This project is a fork of bitaddress.org, the original trustworthy
 JavaScript powered offline bitcoin address generator.
 
 This attractive paper wallet design is two-sided and folds up to
@@ -30,7 +61,7 @@ Rendering and printing seems to work best using:
    Linux:    Firefox
 
 
-*** COMPARED WITH BITCOINPAPERWALLET.COM ***
+*** COMPARED WITH BITADDRESS.ORG ***
 
 Images and resources have been moved out of the .html file (where they were
 base-64 encoded) and into an images directory to make the code easier to review.
@@ -47,22 +78,25 @@ You can also bypass the random key generator and supply your own keys or so-call
 After downloading the ZIP package for this generator, you should find a file
 named generate-wallet.html.sig which you can use to:
 
-* how proov generate-wallet.html not tamper.
-* wow. such fork. very commiter. Marcos Ojeda (marcos@generic.cx)
-  so nerd. https://generic.cx/pgp.html
+* Verify that generate-wallet.html hasn't been tampered with, and
+* Get proof that it really was authored by Canton Becker (canton@gmail.com)
+  whose GPG public key and fingerprint should be confirmed at http://cantonbecker.com
 
 For example, if you have GPG installed, you should be able cd to the appropriate
 directory and type in these two commands:
 
-  gpg --recv-key 9B7C45A7
+  gpg --recv-key 36E1D9B6
   gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
 
-such signature. very fingerprint. https://generic.cx/pgp.html
+And then verify the resulting signature's fingerprint against Canton Becker's
+published fingerprint at http://cantonbecker.com
 
 If you get warnings like "This key is not certified, there is no indication that
 the key belongs to the owner" do not worry, this is normal.
 
-- wow. marcos
+- Canton Becker
+http://cantonbecker.com
+canton@gmail.com
 
 
 
@@ -109,15 +143,15 @@ of others. The individual copyrights are included throughout the document along 
 licenses. Included JavaScript libraries are separated with HTML script tags.
 
 Summary of JavaScript functions with a redistributable license:
-JavaScript function		License
--------------------		--------------
-Array.prototype.map		Public Domain
-window.Crypto			BSD License
-window.SecureRandom		BSD License
-window.EllipticCurve		BSD License
-window.BigInteger		BSD License
-window.QRCode			MIT License
-window.Bitcoin			MIT License
+JavaScript function   License
+-------------------   --------------
+Array.prototype.map   Public Domain
+window.Crypto     BSD License
+window.SecureRandom   BSD License
+window.EllipticCurve    BSD License
+window.BigInteger   BSD License
+window.QRCode     MIT License
+window.Bitcoin      MIT License
 
 The bitaddress.org software is available under The MIT License (MIT)
 Copyright (c) 2011-2012 bitaddress.org
