@@ -1,11 +1,10 @@
-**** Wow. Very ZIP FILE. do want? ******************-------------------------->
-such browsing https://github.com/nsfmc/paperwallet
-so ease. very button. "Download ZIP". look. right   -------------------------->
-****************************************************-------------------------->
+### Dogecoin Paper Wallet
+- [Live Preview](http://mariposan.github.io/paperwallet)
+- [Download ZIP](https://github.com/mariposan/paperwallet/archive/master.zip)
 
 
-very fork. so bitcoinpaperwallet.com, such improvement!
-JavaScript powered offline bitcoin address generator.
+
+This is a fork of nsfmc's [paperwallet](https://github.com/nsfmc/paperwallet), which is a fork of cantonbecker's [bitcoinpaperwallet](https://github.com/cantonbecker/bitcoinpaperwallet) JavaScript powered offline bitcoin address generator.
 
 *** SUCH AUTHENTICITY ***
 
