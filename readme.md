@@ -13,15 +13,15 @@ named `generate-wallet.html.sig` which you can use to:
 * Get proof that it really was authored by [Mariposan](http://mariposan.org).
 * how proof generate-wallet.html not tamper.
 
-$ `gpg --recv-key 2089E5FD`
-$ `gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html`
+`$ gpg --recv-key 2089E5FD`
+`$ gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html`
 
 And then verify the resulting signature's fingerprint against Mariposan's published fingerprint at [http://mariposan.org](http://mariposan.org).
 
 If you get warnings like "This key is not certified, there is no indication that
 the key belongs to the owner" do not worry, this is normal.
 
-#### Many Donate
+### Much Donate
 - very dogecoin DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7
 - such bitcoin  1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU
 
