@@ -21,8 +21,8 @@ If you get warnings like "This key is not certified, there is no indication that
 the key belongs to the owner" do not worry, this is normal.
 
 ### Much Donate
-- very dogecoin DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7
-- such bitcoin  1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU
+- very dogecoin `DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7`
+- such bitcoin  `1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU`
 
 
 
