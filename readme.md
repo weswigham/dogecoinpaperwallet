@@ -13,7 +13,7 @@ named `generate-wallet.html.sig` which you can use to:
 * Get proof that it really was authored by [Mariposan](http://mariposan.org).
 * how proof generate-wallet.html not tamper.
 
-$ `gpg --recv-key 9B7C45A7`
+$ `gpg --recv-key 2089E5FD`
 $ `gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html`
 
 And then verify the resulting signature's fingerprint against Mariposan's published fingerprint at [http://mariposan.org](http://mariposan.org).
