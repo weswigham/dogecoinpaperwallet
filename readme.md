@@ -11,7 +11,6 @@ named `generate-wallet.html.sig` which you can use to:
 
 * Verify that generate-wallet.html hasn't been tampered with, and
 * Get proof that it really was authored by [Mariposan](http://mariposan.org).
-* how proof generate-wallet.html not tamper.
 
 `$ gpg --recv-key 2089E5FD`
 `$ gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html`
