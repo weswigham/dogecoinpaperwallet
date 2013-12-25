@@ -1,5 +1,5 @@
 # Dogecoin Paper Wallet
-- [Live Preview](http://mariposan.github.io/paperwallet)
+- [Live Preview](http://mariposan.github.io/dogecoinpaperwallet)
 - [Download ZIP](https://github.com/mariposan/dogecoinpaperwallet/archive/master.zip)
 
 
