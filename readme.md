@@ -10,12 +10,12 @@ After downloading the ZIP package for this generator, you should find a file
 named `generate-wallet.html.sig` which you can use to:
 
 * Verify that generate-wallet.html hasn't been tampered with, and
-* Get proof that it really was authored by [Mariposan](http://mariposan.org).
+* Get proof that it really was authored by [Mariposan](http://mariposan.org/pgp).
 
 `$ gpg --recv-key 2089E5FD`
 `$ gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html`
 
-And then verify the resulting signature's fingerprint against Mariposan's published fingerprint at [http://mariposan.org](http://mariposan.org).
+And then verify the resulting signature's fingerprint against Mariposan's published fingerprint at [http://mariposan.org/pgp](http://mariposan.org/pgp).
 
 If you get warnings like "This key is not certified, there is no indication that
 the key belongs to the owner" do not worry, this is normal.
