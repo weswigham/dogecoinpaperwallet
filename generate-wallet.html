@@ -6,23 +6,21 @@
 
     generate-wallet.html (from https://bitcoinpaperwallet.com)
 
-    Very email: Marcos Ojeda < marcos@generic.cx >
+    Very email: Mariposan (hello@mariposan.org)
 
     generate-wallet.html is always distributed with a PGP signature "generate-wallet.html.sig" which you
     can use to validate the integrity and authorship of this file like so:
 
     gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
 
-	Such copyright. So portion. omg 2013. marcos.a.ojeda pls http://generic.cx
-
     Wallet design and portions of this code are ©Copyright 2013 Canton Becker and bitaddress.org
     Other portions of this code are copyrighted by their respective authors - see below.
 
 
     ****************************************************************************************
-    * Wow. So appreciate. Nice coin. DDhDcKw2gMsr2RJSbeB91Nthp1UhSJgVAW
-    * github: http://github.com/nsfmc/paperwallet
-    * conservative. very fiat. 12hejef8yqrjrVFvA1nyM9tJGVKAnYYFDf
+    * Wow. So appreciate. Nice coin. DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7
+    * github: http://github.com/mariposan/dogecoinpaperwallet
+    * conservative. very fiat. 1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU
     ****************************************************************************************
     * Much Inspiration. Very bitcoinpaperwallet.com
     * Bitcoin Donation Address: 1Pjg628vjMLBvADrPHsthtzKiryM2y46DG
@@ -74,10 +72,10 @@
 	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-	GitHub Repository: https://github.com/cantonbecker/bitcoinpaperwallet
+	GitHub Repository: https://github.com/mariposan/dogecoinpaperwallet
 	-->
 
-	<title>Such Dogecoin. Very Paper.</title>
+	<title>Dogecoin Paper Wallet Generator. Wow.</title>
 
 
 	<script type="text/javascript">
@@ -6332,9 +6330,9 @@ Bitcoin.Util = {
 		a:hover {color: #0000FF; text-decoration: underline;}
 
 
-		#main { position: relative; margin: 0px auto; width: 1010px; color: #444; } /* removed text-align: center; */
-		#logoback {  background-image:url(images/logo.png); background-position: top left; background-repeat: no-repeat; }
-		#generate { font-family: Courier New; height: 158px; text-align: left; position: relative; padding: 5px; border: none; }
+		#main { position: relative; margin: 0px auto; width: 1011px; color: #444; } /* removed text-align: center; */
+		#logoback {  background-image:url(images/logo.png); background-position: top left; background-repeat: no-repeat; background-size: 1011px 163px; height: 163px; }
+		#generate { font-family: Courier New; height: 163px; text-align: left; position: relative; padding: 5px; border: none; }
 		#generate span { padding: 5px 5px 0 5px; }
 		#menu { visibility: hidden; font-size: 90%; padding: 0 12px;}
 
@@ -6369,7 +6367,7 @@ Bitcoin.Util = {
 		#paperarea .artwallet .btcaddress
 		{
 		    position: absolute; top: 275px; left: 40px; z-index: 100; background-color: transparent;
-		    color: black; margin: 0;
+		    color: #ed1c24; margin: 0;
 				-webkit-transform-origin:top left;
 				/* -webkit-transform:rotate(-90deg); */
 				-moz-transform-origin:top left;
@@ -6385,7 +6383,7 @@ Bitcoin.Util = {
 		#paperarea .artwallet .dupbtcaddress
 		{
 		    position: absolute; top: 45px; left: 40px; z-index: 100; background-color: transparent;
-		    color: black; margin: 0;
+		    color: #ed1c24; margin: 0;
 				/* -webkit-transform-origin:top left; */
 				-webkit-transform:rotate(-180deg);
 				/* -moz-transform-origin:top left; */
@@ -6401,7 +6399,7 @@ Bitcoin.Util = {
 		#paperarea .artwallet .btcprivwif
 		{
 		    position: absolute; top: 245px; left: 610px; z-index: 100; background-color: transparent;
-		    color: #fff; margin: 0;
+		    color: #1c8ded; margin: 0;
 				-webkit-print-color-adjust: exact;
 				-webkit-transform-origin:top left;
 				/*-webkit-transform:rotate(-90deg);*/
@@ -6418,7 +6416,7 @@ Bitcoin.Util = {
 		#paperarea .artwallet .dupbtcprivwif
 		{
 		    position: absolute; top: 75px; left: 610px; z-index: 100; background-color: transparent;
-		    color: #fff; margin: 0;
+		    color: #1c8ded; margin: 0;
 				-webkit-print-color-adjust: exact;
 				/* -webkit-transform-origin:top left; */
 				-webkit-transform:rotate(-180deg);
@@ -6500,17 +6498,17 @@ Bitcoin.Util = {
 		  50.01% { opacity: 1 } 100% { opacity: 1 }
 		}
 		blink {
-		  -webkit-animation: blink 0.5s infinite linear alternate;
+		  -webkit-animation: blink 0.75s infinite linear alternate;
 		  -webkit-font-smoothing: antialiased;
 		}
-		#generatelabelmovemouse { margin: 30px 150px; padding: 30px; font-weight: bold; text-align: center; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;background-color:#fafafa;-webkit-box-shadow: #B3B3B3 1px 1px 1px;-moz-box-shadow: #B3B3B3 1px 1px 1px; box-shadow: #B3B3B3 1px 1px 1px; }
+		#generatelabelmovemouse { margin: 30px 150px; padding: 50px 30px; font-weight: bold; text-align: center; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;background-color:#fafafa;-webkit-box-shadow: #ccc 0 1px 4px;-moz-box-shadow: #ccc 0 1px 4px; box-shadow: #ccc 0 1px 4px;font-family:Comic Sans MS; }
 		#generatelabelbitcoinaddress { text-align: center;}
 
 		@media screen
 		{
-			#tagline { margin: 10px 0 0 250px; font-style: italic; font-size: 18px; color: rgba(255,255,255, .9); }
-			#tagline span {padding-left: 10px; font-size: 11px; color: #fff500;}
-			#tagsite { margin: 5px 0 20px 252px; font-size: 14px; color: #fff; }
+			#tagline { margin: 10px 0 0 360px; font-size: 24px; color: rgb(255,255,255); text-shadow: 0 1px 1px #ee7b00; }
+			#tagsite span {display:block;padding-top: 10px; font-size: 11px; color:rgba(0,0,0,0.3);}
+			#tagsite { margin: 5px 0 5px 360px; font-size: 14px; color: #fff; text-shadow: 0 1px 1px #ee7b00; }
 
 
 			#tagwarning { position: absolute; left: 250px; top: 25px; font-size: 12px; color: red; }
@@ -6586,8 +6584,8 @@ Bitcoin.Util = {
               <span><a href="?culture=fr" id="culturefr">Français</a></span> -->
               &nbsp;
           	</div>
-			<div id="tagline">Open Source JavaScript Dogecoin Wallet Generator <span>Updated December 13, 2013</span></div>
-			<div id="tagsite">Such Wallet. Many Doge.</div>
+			<div id="tagline">Open Source JavaScript Dogecoin Wallet Generator</div>
+			<div id="tagsite">Wow. Many doge. Very wallet.<span>Updated December 24, 2013</span></div>
             <div id="tagwarning"></div>
 
 		<div class="menu" id="menu">
@@ -6610,8 +6608,8 @@ Bitcoin.Util = {
 		</div><!-- end logoback -->
 
 		<div id="generate">
-			<div id="generatelabelmovemouse"><blink>Wow. So touchigns. Very active. Many pleasing.</blink></div>
-			<p id="generatelabelbitcoinaddress">(For shibe. Much random &amp; sekure dogecoin address.)</p>
+			<div id="generatelabelmovemouse"><blink>Be a good shibe and move your mouse around.</blink></div>
+			<p id="generatelabelbitcoinaddress">(Doge loves chasing the pointer. It makes the wallet much secure.)</p>
 		</div>
 
 		<div id="wallets">
@@ -6631,8 +6629,8 @@ Bitcoin.Util = {
 						<br /><br />
 
 						<div style="float: right; width: 410px; padding-left: 30px; margin-left: 20px; border-left: 4px solid #EEE;">
-						<div style="float: right; width: 325px; padding-left: 15px;">
-                        <p style="margin-top: 0;"><strong>Select your wallet design or language here:</strong>
+						<!--						<div style="float: right; width: 325px; padding-left: 15px;">
+                         <p style="margin-top: 0;"><strong>Select your wallet design or language here:</strong>
     					<select id="designPicker" onChange="setDesign(this.value);">
                           <option value="default">Standard (English/en)</option>
                           <option value="holiday">Holiday / Christmas Design (English/en)</option>
@@ -6648,7 +6646,7 @@ Bitcoin.Util = {
                         </select>
                         </p>
                         </div>
-                        <img src="images/flags.png" width="65" height="25" alt="Flags" style="padding-top: 10px;">
+                        <img src="images/flags.png" width="65" height="25" alt="Flags" style="padding-top: 10px;"> -->
 
                         <img id="designPreview" src="images/finished-sample-sealed.jpg" width="400" height="203" alt="Sealed Wallet" >
 
@@ -6695,7 +6693,7 @@ Bitcoin.Util = {
                         Then you will put the same page back in your printer (but flipped over) to print out the back side of your wallet. This isn't just for good looks: the back side design includes additional tamper-resistant safeguards.</span>
 						<br /><br />
 						<span id="instructions5"><b>Step 4: Cut, Fold, Seal &amp; Fund</b><br />
-                        Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer bitcoins from your online holdings to your new wallet.</span>
+                        Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer dogecoins from your online holdings to your new wallet.</span>
                         <br /><br />
 <!-- 						<span><a href="http://www.youtube.com/watch?v=a47rrYBWjWQ" target="_blank" class="nicerButton" style="width: 400px;">90 second tutorial video on YouTube &raquo;</a></span>
 						<br /><br />
@@ -6810,7 +6808,7 @@ Bitcoin.Util = {
 
 						<h1><span id="instructions16">How to add funds to your wallet:</span></h1>
 
-						<span id="instructions17">Send bitcoins to the address (or QR code) where your wallet says "Very Address" and "So Public".</span>
+						<span id="instructions17">Send dogecoins to the address (or QR code) where your wallet says "Very Address" and "So Public".</span>
 						<br /><br />
 
 						<h1><span id="instructions18">How to withdraw funds from your wallet:</span></h1>
@@ -6828,16 +6826,12 @@ Bitcoin.Util = {
 		<div id="footer" class="footer">
 			<div class="authorbtc">
 				<div>
-					<span class="item" id="footerlabeldonations"><b>Support Doge Paper Wallet</b></span>
+					<span class="item" id="footerlabeldonations"><b>Support Dogecoin Paper Wallet</b></span>
                     <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
-                    <strong>such doge</strong>:&nbsp; DDhDcKw2gMsr2RJSbeB91Nthp1UhSJgVAW<br />
-                    <strong>very fiat</strong>:&nbsp; 12hejef8yqrjrVFvA1nyM9tJGVKAnYYFDf<br /></span>
+                    <strong>very dogecoin</strong>: DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7<br />
+                    <strong>such bitcoin</strong>:&nbsp; 1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU<br /></span>
                 </div>
 				<div>
-					<span class="item" id="footerlabeldonations"><b>Bitcoin Donations</b></span>
-                    <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
-                    <strong>Bitcoin Paper Wallet</strong>:&nbsp; 1Pjg628vjMLBvADrPHsthtzKiryM2y46DG<br />
-                    <strong>bitaddress.org source</strong>: 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN</span>
 					<span class="item" id="footerlabeltranslatedby"></span>
 				</div>
 			</div>
@@ -6846,22 +6840,22 @@ Bitcoin.Util = {
                 <div id="siginfo" style="display: none; position: absolute; top: -300px;">
                   <p class="closeme"><a href="#" onClick="document.getElementById('siginfo').style.display='none'; return(false);">X</a></p>
 
-                    After downloading and extracting the <a href="https://github.com/nsfmc/paperwallet" target="_blank">ZIP package</a> for this generator, you should find a file named <b>generate-wallet.html.sig</b>
+                    After downloading and extracting the <a href="https://github.com/mariposan/dogecoinpaperwallet" target="_blank">ZIP package</a> for this generator, you should find a file named <b>generate-wallet.html.sig</b>
                     which you can use to:
                     <ol><li> verify that <strong>generate-wallet.html</strong> hasn't been tampered with, and</li>
-                    <li>get proof that it really was authored by Marcos Ojeda (marcos@generic.cx) whose public key and fingerprint can be confirmed at <a href="https://generic.cx/pgp.html">generic.cx</a></li>
+                    <li>get proof that it really was authored by Mariposan (hello@mariposan.org) whose public key and fingerprint can be confirmed at <a href="http://mariposan.org">mariposan.org</a></li>
                     </ol>
                     For example, if you have GPG installed, just open the terminal, change directory (cd) to where this file lives, and type:<br />
                     <code>  gpg --recv-key 9B7C45A7<br />
                     gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html</code>
-                   <br /><br />And then verify the signature's fingerprint against Canton Becker's <a href="https://generic.cx/pgp.html">published PGP/GPG fingerprint</a>.<br /><br />
+                   <br /><br />And then verify the signature's fingerprint against Mariposan's <a href="http://mariposan.org">published PGP/GPG fingerprint</a>.<br /><br />
                   <a href="http://www.google.com/search?q=how+to+verify+PGP+%22.sig%22+signature+on+file">Learn how to verify a PGP-signed file &raquo;</a>
                 </div>
 
             	<span class="item"><b>Security Details</b></span>
-                <span class="item" style="font-size: 75%;"><a href="https://bitcoinpaperwallet.com/#security" target="_blank">For extra security</a>, do not run this generator directly from the bitcoinpaperwallet.com website.<br />
+                <span class="item" style="font-size: 75%;"><a href="https://bitcoinpaperwallet.com/#security" target="_blank">For extra security</a>, do not run this generator directly from the http://mariposan.github.io/paperwallet website.<br />
                 Download the generator and run the HTML as a local file in your browser instead.</span>
-				<span class="item"><a href="https://github.com/nsfmc/paperwallet" target="_blank" id="footerlabelgithub"><strong>Download</strong> (GitHub ZIP file)</a></span>
+				<span class="item"><a href="https://github.com/mariposan/dogecoinpaperwallet" target="_blank" id="footerlabelgithub"><strong>Download</strong> (GitHub ZIP file)</a></span>
 
                 <span class="item" id="footerlabeltests" style="font-size: 75%;"><a href="?unittests=1">Run local encode/decode unit tests</a></span>
 
@@ -6869,7 +6863,7 @@ Bitcoin.Util = {
 
 			</div>
 			<div class="copyright">
-				<span id="footerlabelcopyright1">&copy; Copyright 2013 <a href="https://generic.cx/">Marcos Ojeda</a>, <a href="https://bitcoinpaperwallet.com/">Canton Becker</a> and Pointbiz/bitaddress.org</span>
+				<span id="footerlabelcopyright1">&copy; Copyright 2013 <a href="http://mariposan.org">Mariposan</a>, <a href="https://generic.cx/">Marcos Ojeda</a>, <a href="https://bitcoinpaperwallet.com/">Canton Becker</a> and Pointbiz/bitaddress.org</span>
 				<span id="footerlabelcopyright2">JavaScript copyrights are included in the source.</span>
 				<span id="footerlabelnowarranty"><strong>No warranty.</strong></span><br />
 
@@ -7174,12 +7168,12 @@ Bitcoin.Util = {
 
 				"es": {
 					// javascript alerts or messages
-					"paperlabelbitcoinaddress": "Dirección Bitcoin:",
+					"paperlabelbitcoinaddress": "Dirección Dogecoin:",
 					"paperlabelprivatekey": "Clave privada (formato para importar):",
 
 					// header and menu html
-					"tagline": "Generador de carteras Bitcoin de código abierto en lado de cliente con Javascript",
-					"generatelabelbitcoinaddress": "Generando dirección Bitcoin...",
+					"tagline": "Generador de carteras Dogecoin de código abierto en lado de cliente con Javascript",
+					"generatelabelbitcoinaddress": "Generando dirección Dogecoin...",
 					"generatelabelmovemouse": "<blink>Mueve un poco el ratón para crear entropía...</blink>",
 					"calibratewallet": "Calibrate Printer (es)",
 					"paperwallet": "Cartera en papel",
@@ -7187,11 +7181,11 @@ Bitcoin.Util = {
 
 					// footer html
 					"footerlabeldonations": "Donaciones:",
-					"footerlabeltranslatedby": "Traducción: <b>12345</b>Vypv2QSmuRXcciT5oEB27mPbWGeva",
+					"footerlabeltranslatedby": "Traducción",
 					"footerlabelpgp": "Clave pública PGP",
 					"footerlabelversion": "Histórico de versiones",
 					"footerlabelgithub": "Repositorio GitHub",
-					"footerlabelcopyright1": "&copy; Copyright 2013 Canton Becker and bitaddress.org.",
+					"footerlabelcopyright1": "&copy; Copyright 2013 Mariposan, Canton Becker, and bitaddress.org.",
 					"footerlabelcopyright2": "Copyright del código JavaScript: en el fuente.",
 					"footerlabelnowarranty": "Sin garantía.",
 
@@ -7204,12 +7198,12 @@ Bitcoin.Util = {
 
 				"fr": {
 					// javascript alerts or messages
-					"paperlabelbitcoinaddress": "Adresse Bitcoin:",
+					"paperlabelbitcoinaddress": "Adresse Dogecoin:",
 					"paperlabelprivatekey": "Clé Privée (Format d'importation de porte-monnaie):",
 
 					// header and menu html
-					"tagline": "Générateur De Porte-Monnaie Bitcoin Javascript Hors-Ligne",
-					"generatelabelbitcoinaddress": "Création de l'adresse Bitcoin...",
+					"tagline": "Générateur De Porte-Monnaie Dogecoin Javascript Hors-Ligne",
+					"generatelabelbitcoinaddress": "Création de l'adresse Dogecoin...",
 					"generatelabelmovemouse": "<blink>BOUGEZ votre souris pour ajouter de l'entropie...</blink>",
 					"calibratewallet": "Calibrate Printer (fr)",
 					"paperwallet": "Porte-Monnaie Papier",
@@ -7217,11 +7211,11 @@ Bitcoin.Util = {
 
 					// footer html
 					"footerlabeldonations": "Dons:",
-					"footerlabeltranslatedby": "Traduction: 1Gy7NYSJNUYqUdXTBow5d7bCUEJkUFDFSq",
+					"footerlabeltranslatedby": "Traduction",
 					"footerlabelpgp": "Clé Publique PGP",
 					"footerlabelversion": "Historique De Version Signé",
 					"footerlabelgithub": "Dépôt GitHub",
-					"footerlabelcopyright1": "&copy; Copyright 2013 Canton Becker and bitaddress.org.",
+					"footerlabelcopyright1": "&copy; Copyright 2013 Mariposan, Canton Becker, and bitaddress.org.",
 					"footerlabelcopyright2": "Les droits d'auteurs JavaScript sont inclus dans le code source.",
 					"footerlabelnowarranty": "Aucune garantie.",
 					"newaddress": "Générer Une Nouvelle Adresse",

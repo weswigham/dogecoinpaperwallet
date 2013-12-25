@@ -1,36 +1,33 @@
-### Dogecoin Paper Wallet
+# Dogecoin Paper Wallet
 - [Live Preview](http://mariposan.github.io/paperwallet)
-- [Download ZIP](https://github.com/mariposan/paperwallet/archive/master.zip)
+- [Download ZIP](https://github.com/mariposan/dogecoinpaperwallet/archive/master.zip)
 
 
+*This is a fork of nsfmc's [paperwallet](https://github.com/nsfmc/paperwallet), which is a fork of cantonbecker's [bitcoinpaperwallet](https://github.com/cantonbecker/bitcoinpaperwallet) JavaScript powered offline bitcoin address generator. Please forgive the lack of Dogespeak in this README – this stuff is important.*
 
-This is a fork of nsfmc's [paperwallet](https://github.com/nsfmc/paperwallet), which is a fork of cantonbecker's [bitcoinpaperwallet](https://github.com/cantonbecker/bitcoinpaperwallet) JavaScript powered offline bitcoin address generator.
+### Wow. Very Security
+After downloading the ZIP package for this generator, you should find a file
+named `generate-wallet.html.sig` which you can use to:
 
-*** SUCH AUTHENTICITY ***
-
-wow. generate-wallet.html.sig much useful
-
+* Verify that generate-wallet.html hasn't been tampered with, and
+* Get proof that it really was authored by [Mariposan](http://mariposan.org).
 * how proof generate-wallet.html not tamper.
-* wow. such fork. very commiter. Marcos Ojeda (marcos@generic.cx)
-  so nerd. https://generic.cx/pgp.html
 
-so shell. nice command.
+$ `gpg --recv-key 9B7C45A7`
+$ `gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html`
 
-  gpg --recv-key 9B7C45A7
-  gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
+And then verify the resulting signature's fingerprint against Mariposan's published fingerprint at [http://mariposan.org](http://mariposan.org).
 
-such signature. very fingerprint. https://generic.cx/pgp.html
+If you get warnings like "This key is not certified, there is no indication that
+the key belongs to the owner" do not worry, this is normal.
 
-so warnings "This key is not certified, there is no indication that
-the key belongs to the owner" pls ignore. serious. such normal.
+#### Many Donate
+- very dogecoin DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7
+- such bitcoin  1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU
 
-- wow. marcos
-very doge DDhDcKw2gMsr2RJSbeB91Nthp1UhSJgVAW
-such fiat 12hejef8yqrjrVFvA1nyM9tJGVKAnYYFDf
 
-------------------------------------------------------------------
---- The original bitcoinpaperwallet.com README continues below ---
-------------------------------------------------------------------
+
+### The original bitcoinpaperwallet.com README:
 
 *** bitcoinpaperwallet.com ***
 
