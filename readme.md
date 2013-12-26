@@ -25,10 +25,11 @@ the key belongs to the owner" do not worry, this is normal.
 - such bitcoin  `1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU`
 
 
+--------------------------------------
 
-### The original bitcoinpaperwallet.com README:
+#### The original bitcoinpaperwallet.com README:
 
-*** bitcoinpaperwallet.com ***
+### bitcoinpaperwallet.com
 
 This project is a fork of bitaddress.org, the original trustworthy
 JavaScript powered offline bitcoin address generator.
@@ -42,7 +43,7 @@ or by supplying keys you have generated using your own means (vanitygen, dice.)
 Use bitaddress.org if you need BIP38, brain wallets, or bulk addresses.
 
 
-*** HOW TO USE THIS GENERATOR ***
+### HOW TO USE THIS GENERATOR
 
 1) Extract the ZIP file
 2) Open up the 'generate-wallet.html' file with your web browser.
@@ -56,7 +57,7 @@ Rendering and printing seems to work best using:
    Linux:    Firefox
 
 
-*** COMPARED WITH BITADDRESS.ORG ***
+### COMPARED WITH BITADDRESS.ORG
 
 Images and resources have been moved out of the .html file (where they were
 base-64 encoded) and into an images directory to make the code easier to review.
@@ -68,7 +69,7 @@ You can also bypass the random key generator and supply your own keys or so-call
 "vanity addresses".
 
 
-*** HOW TO VERIFY THE AUTHENTICITY OF THIS DOWNLOAD ***
+### HOW TO VERIFY THE AUTHENTICITY OF THIS DOWNLOAD
 
 After downloading the ZIP package for this generator, you should find a file
 named generate-wallet.html.sig which you can use to:

@@ -6305,7 +6305,7 @@ Bitcoin.Util = {
 		}
 
 		.right { text-align: right; }
-		.walletarea { display: none; border-top: 2px solid #f7931a; }
+		.walletarea { display: none; }
 		.keyarea { font-family: Courier New; height: 110px; text-align: left; position: relative; padding: 5px; }
 		.keyarea .public { float: left; }
 		.keyarea .pubaddress { display: inline-block; height: 40px; padding: 0 0 0 10px; float: left; }
@@ -6319,32 +6319,26 @@ Bitcoin.Util = {
 		.faqs li { padding: 3px 0; }
 		body { margin-top: 0; font-family: Comic Sans ms; background-image:url(images/webpage-background.png); background-repeat: repeat-y; background-position: center; }
 
-		h1 { font-size: 24px; font-weight: 100; color: #090; margin:0 0 10px 0; padding:0; }
+		h1 { font-size: 32px; line-height: 90px; font-weight: 100; color: #555; margin:20px 0; padding:0; }
 
-		a, a:visited { text-decoration: none; color: #ff6c00; }
-		a:hover {color: #0000FF; text-decoration: underline;}
+		a, a:visited { color: #3e7494; }
+		a:hover {color: #000; text-decoration: underline;}
 
 
-		#main { position: relative; margin: 0px auto; width: 1011px; color: #444; } /* removed text-align: center; */
-		#logoback {  background-image:url(images/logo.png); background-position: top left; background-repeat: no-repeat; background-size: 1011px 163px; height: 163px; }
-		#generate { font-family: Courier New; height: 163px; text-align: left; position: relative; padding: 5px; border: none; }
+		#main { margin: 0px auto; width: 1011px; color: #444; }
+		#logoback { background-image:url(images/logo.png); background-repeat: no-repeat; background-size: 1011px 163px; height: 163px; overflow: auto; position: relative; }
+		#generate { font-family: Courier New; text-align: left; position: relative; padding: 5px; border: none; }
 		#generate span { padding: 5px 5px 0 5px; }
 		#menu { visibility: hidden; font-size: 90%; padding: 0 12px;}
-
-		#culturemenu { text-align: right; padding: 10px 20px; font-size: 12px; }
-
-		#culturemenu { text-align: right; padding: 10px 20px; font-size: 12px;}
-		#culturemenu span { padding: 3px; }
-		#culturemenu .selected { text-decoration: none; color: #000000; }
 
 		#calibratearea .calibratesvg { width: 1010px; height: 331px; border: 0; margin: 0; padding: 0; left: 0; }
 		#calibratearea #calibrationinfo { clear: both; text-align: center; color: #990000; padding: 10px 0;}
 		#backarea .backsvg { width: 1010px; height: 331px; border: 0; margin: 0; padding: 0; left: 0; }
 
-		#printeradjust { color: #060; font-size: 12px; }
-		#printeradjust span { background-color: #e2f9bd; padding: 2px 3px; border: 1px solid #009900; font-family: "Courier New", Courier, monospace; font-weight: bold; font-size: 12px;}
-		#printeradjust a:hover span { background-color: #CCFFCC; }
-		#printeradjust a, #printeradjust a:hover {text-decoration: none;}
+		#printeradjust { color: #F08D01; font-size: 13px; float: right; text-align: right; margin-top: 5px; }
+		#printeradjust span { background-color: rgba(0,0,0,0); padding: 2px 3px; font-family: "Courier New", Courier, monospace; font-weight: bold; font-size: 13px; border-radius: 50%; width: 15px; height: 10px; box-sizing: border-box; }
+		#printeradjust a:hover span { background-color: rgba(0,0,0,0.5); color: #fff; }
+		#printeradjust a, #printeradjust a:hover {text-decoration: none; color: #000;}
 		#printeradjust input { text-align: center; margin: 0 2px;}
 
 
@@ -6469,8 +6463,12 @@ Bitcoin.Util = {
 		}
 
 		.instructionsarea { padding: 0 25px; }
-		.instructionsarea { font-size: 12px; line-height: 18px; }
-		.instructionsarea li { padding-bottom: 8px; list-style: none; }
+		.instructionsarea { font-size: 13px; line-height: 19px; }
+		.instructionsarea p { margin-bottom: 20px; }
+		.instructionsarea b { text-decoration: underline; cursor: pointer; color: #0072b4; font-size: 15px; }
+		.instructionsarea b:hover { color: #003d61; }
+		.instructionsarea ul { padding: 0; }
+		.instructionsarea li { padding-bottom: 10px; list-style: none; }
 
 		.highlighted { font-size: 14px; padding: 8px; background-color: #ebfdbf;}
 
@@ -6493,30 +6491,32 @@ Bitcoin.Util = {
 		  -webkit-animation: blink 0.75s infinite linear alternate;
 		  -webkit-font-smoothing: antialiased;
 		}
-		#generatelabelmovemouse { margin: 30px 150px; padding: 50px 30px; font-weight: bold; text-align: center; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;background-color:#fafafa;-webkit-box-shadow: #ccc 0 1px 4px;-moz-box-shadow: #ccc 0 1px 4px; box-shadow: #ccc 0 1px 4px;font-family:Comic Sans MS; }
+		#generatelabelmovemouse { margin: 60px 150px; padding: 80px 30px; font-weight: bold; text-align: center; -webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;background-color:#fafafa;-webkit-box-shadow: #ccc 0 1px 4px;-moz-box-shadow: #ccc 0 1px 4px; box-shadow: #ccc 0 1px 4px;font-family:Comic Sans MS; }
 		#generatelabelbitcoinaddress { text-align: center;}
 
 		@media screen
 		{
-			#tagline { margin: 10px 0 0 360px; font-size: 24px; color: rgb(255,255,255); text-shadow: 0 1px 1px #ee7b00; }
-			#tagsite span {display:block;padding-top: 10px; font-size: 11px; color:rgba(0,0,0,0.3);}
+			#tagline { margin: 40px 0 0 360px; font-size: 24px; color: rgb(255,255,255); text-shadow: 0 1px 1px #ee7b00; }
 			#tagsite { margin: 5px 0 5px 360px; font-size: 14px; color: #fff; text-shadow: 0 1px 1px #ee7b00; }
 
-
-			#tagwarning { position: absolute; left: 250px; top: 25px; font-size: 12px; color: red; }
-			.menu { text-align: left; }
-			.menu .tab { border-top-left-radius: 5px; border-top-right-radius: 5px; display: inline-block; background-color: #e2f9bd;
-						 color: #060; font-size: 12px;
-						 border-top: 2px solid #f7931a;
-						 border-left: 2px solid #f7931a;
-						 border-right: 2px solid #f7931a;
-						 border-bottom: 2px solid #e2f9bd;
-						 padding: 4px 8px; margin: 0 2px 0 0; position: relative; top: 2px; z-index: 110; cursor: pointer; }
-			.menu .tab:hover { color: #090; }
-			.menu .tab.selected { background-color: #FFF; border-bottom: 4px solid #FFF; cursor: default; font-weight: bold; }
-			.menu .tab.selected:hover { color: #090; }
-
-			.menu #printeradjust { float: right; text-align: right; margin-top: 5px; } /* zoom & shift */
+			.menu { text-align: left; margin-top: 36px; }
+			.menu .tab {
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+				display: inline-block;
+				background-color: #c6eaff;
+				color: #0072b4; font-size: 13px;
+				border-bottom: 1px solid #81C0E5;
+				padding: 4px 8px;
+				margin: 0 2px 0 0;
+				position: relative;
+				top: 3px;
+				z-index: 110;
+				cursor: pointer;
+			}
+			.menu .tab:hover { color: #003d61; background: #fff; }
+			.menu .tab.selected { background-color: #FFF; cursor: default; font-weight: bold; border-color: #fff; }
+			.menu .tab.selected:hover { color: #003d61; }
 
 			.pagebreak { height: 50px; }
 			.commands { padding: 10px 0 20px 10px; margin-bottom: 0;}
@@ -6533,7 +6533,7 @@ Bitcoin.Util = {
 			#bulkstartindex, #paperlimit, #paperlimitperpage { width: 35px; }
 			#bulklimit { width: 45px; }
 
-			.footer { font-family: Comic Sans MS; font-size: 90%; clear: both; padding: 10px 0 10px 0; margin: 50px 20px; color: #999; border-top: 1px dotted #999;}
+			.footer { font-family: Comic Sans MS; font-size: 90%; clear: both; padding: 10px 0 10px 0; margin: 100px 20px 0; color: #999; border-top: 1px dotted #999;}
 			.footer div span.item { padding: 5px; }
 			.footer .authorbtc { float: left; width: 470px; }
 			.footer .authorbtc span.item { text-align: left; display: block; padding-right: 20px; }
@@ -6568,35 +6568,25 @@ Bitcoin.Util = {
 </head>
 <body onclick="SecureRandom.seedTime();" onkeypress="SecureRandom.seedTime();" onmousemove="ninja.seeder.seed(event);" onLoad="guessPrinterSettings(); setDesign(ninja.getQueryString()['design']);">
 	<div id="main">
-    	<div id="logoback">
-          	<div id="culturemenu">
-              <!--
-              <span><a href="?culture=en" id="cultureen" class="selected">English</a></span> |
-              <span><a href="?culture=es" id="culturees">Español</a></span> |
-              <span><a href="?culture=fr" id="culturefr">Français</a></span> -->
-              &nbsp;
-          	</div>
+  	<div id="logoback">
 			<div id="tagline">Open Source JavaScript Dogecoin Wallet Generator</div>
-			<div id="tagsite">Wow. Many doge. Very wallet.<span>Updated December 24, 2013</span></div>
-            <div id="tagwarning"></div>
+			<div id="tagsite">Wow. Many doge. Very wallet.</div>
 
-		<div class="menu" id="menu">
-        	<div id="printeradjust">
+			<div class="menu" id="menu">
+      	<div id="printeradjust">
 				Zoom:
-                <a href="#" onClick="printZoom(-1); return(false);"><span>-</span></a><input name="printerzoom" id="printerzoom" size="2" value="5" onChange="updateCalibrationInfo();" /><a href="#" onClick="printZoom(1); return(false);"><span>+</span></a>
-                &nbsp;
+          <a href="#" onClick="printZoom(-1); return(false);"><span>-</span></a><input name="printerzoom" id="printerzoom" size="2" value="5" onChange="updateCalibrationInfo();" /><a href="#" onClick="printZoom(1); return(false);"><span>+</span></a>
+              &nbsp;
 				Horizontal Shift:
-                <a href="#" onClick="printShift(-1); return(false);"><span>-</span></a><input name="printershift" id="printershift" size="2" value="5" onChange="updateCalibrationInfo();" /><a href="#" onClick="printShift(1); return(false);"><span>+</span></a>
-            </div>
+          <a href="#" onClick="printShift(-1); return(false);"><span>-</span></a><input name="printershift" id="printershift" size="2" value="5" onChange="updateCalibrationInfo();" /><a href="#" onClick="printShift(1); return(false);"><span>+</span></a>
+        </div>
 
-			<div class="tab selected" id="landwallet" onClick="ninja.tabSwitch(this);">Instructions</div>
-			<div class="tab" id="calibratewallet" onClick="ninja.tabSwitch(this);">1. Calibrate Printer</div>
-			<div class="tab" id="paperwallet" onClick="ninja.tabSwitch(this);">2. Print Front</div>
-			<div class="tab" id="backwallet" onClick="ninja.tabSwitch(this);">3. Print Back</div>
-			<div class="tab" id="foldwallet" onClick="ninja.tabSwitch(this);">4. Cut, Fold, Seal &amp; Fund</div>
-		</div>
-
-
+				<div class="tab selected" id="landwallet" onClick="ninja.tabSwitch(this);">Instructions</div>
+				<div class="tab" id="calibratewallet" onClick="ninja.tabSwitch(this);">1. Calibrate Printer</div>
+				<div class="tab" id="paperwallet" onClick="ninja.tabSwitch(this);">2. Print Front</div>
+				<div class="tab" id="backwallet" onClick="ninja.tabSwitch(this);">3. Print Back</div>
+				<div class="tab" id="foldwallet" onClick="ninja.tabSwitch(this);">4. Cut, Fold, Seal &amp; Fund</div>
+			</div>
 		</div><!-- end logoback -->
 
 		<div id="generate">
@@ -6606,104 +6596,80 @@ Bitcoin.Util = {
 
 		<div id="wallets">
 
-
-
 			<div id="landarea" class="walletarea">
-				<div id="landcommands" class="commands">
-					&nbsp;
-				</div>
 				<div class="instructionsarea">
 					<div class="notes">
-						<h1><span id="instructions0">Welcome! Let's print out a beautiful and secure wallet for your dogecoin.</span></h1>
+						<h1>Print out a beautiful and secure wallet for your dogecoins.</h1>
 
-						<span id="instructions1"><em>Here's an overview of what will happen, step by step.</em></span>
+						<div style="float: right; width: 410px; margin-left: 30px;">
 
-						<br /><br />
+              <img id="designPreview" src="images/finished-sample-sealed.jpg" width="400" height="203" alt="Sealed Wallet" >
 
-						<div style="float: right; width: 410px; padding-left: 30px; margin-left: 20px; border-left: 4px solid #EEE;">
-						<!--						<div style="float: right; width: 325px; padding-left: 15px;">
-                         <p style="margin-top: 0;"><strong>Select your wallet design or language here:</strong>
-    					<select id="designPicker" onChange="setDesign(this.value);">
-                          <option value="default">Standard (English/en)</option>
-                          <option value="holiday">Holiday / Christmas Design (English/en)</option>
-                          <option value="chinese">Standard (Chinese/zh)</option>
-                          <option value="czech">Standard (Czech/cs)</option>
-                          <option value="dutch">Standard (Dutch/nl)</option>
-                          <option value="french">Standard (French/fr)</option>
-                          <option value="german">Standard (German/de)</option>
-                          <option value="italian">Standard (Italian/it)</option>
-                          <option value="portuguese">Standard (Portuguese/pt)</option>
-                          <option value="russian">Standard (Russian/ru)</option>
-                  		  <option value="spanish">Standard (Spanish/es)</option>
-                        </select>
-                        </p>
-                        </div>
-                        <img src="images/flags.png" width="65" height="25" alt="Flags" style="padding-top: 10px;"> -->
-
-                        <img id="designPreview" src="images/finished-sample-sealed.jpg" width="400" height="203" alt="Sealed Wallet" >
-
-						<h2><span id="instructions01">Basic security checklist:</span></h2>
+						<h2>Basic security checklist:</h2>
 						<ul>
-                        <li>
-                        <script language="javascript">
-						  switch(window.location.protocol) {
-							 case 'http:':
-							 case 'https:':
-							   document.write('<span style="color: #990000;">&times; You appear to be running this generator off of a live website, which is not recommended for creating valuable wallets. Instead, use the download link at the bottom of this page to download the ZIP file from GitHub and run this generator offline as a \'local\' HTML file.</span>');
-							   break;
-							 case 'file:':
-							   document.write('<span style="color: #009900;">&#10004; You are running this generator from your own download.</span><br />Tip: Make 100% sure you are offline by trying <a href="http://google.com" target="_blank">google.com</a></span>');
-							   break;
-							 default:
-						  }
-                        </script>
+              <li>
+                <script language="javascript">
+								  switch(window.location.protocol) {
+									 case 'http:':
+									 case 'https:':
+									   document.write('<span style="color: #990000;">&times; You appear to be running this generator off of a live website, which is not recommended for creating valuable wallets. Instead, use the download link at the bottom of this page to download the ZIP file from GitHub and run this generator offline as a \'local\' HTML file.</span>');
+									   break;
+									 case 'file:':
+									   document.write('<span style="color: #009900;">&#10004; You are running this generator from your own download.</span><br />Tip: Make 100% sure you are offline by trying <a href="http://google.com" target="_blank">google.com</a></span>');
+									   break;
+									 default:
+								  }
+                </script>
+							</li>
+              <li>
+              	<script language="javascript">
+								  if (window.crypto && window.crypto.getRandomValues) {
+										 document.write('<span style="color: #009900;">&#10004; Your browser is capable of generating cryptographically random keys using window.crypto.getRandomValues</span>');
+								  } else {
+										 document.write('<span style="color: #990000;">&times; Your browser does NOT support window.crypto.getRandomValues(), which is important for generating the most secure random numbers possible. Please use a more modern browser.</span>');
+								  }
+								</script>
+              </li>
+              <li>
+              	<strong>?</strong> Are you using a secure operating system guaranteed to be free of spyware and viruses, for example, an <a href="https://bitcoinpaperwallet.com/#purchase" target="_blank">Ubuntu LiveCD</a>?
+              </li>
+            </ul>
+					</div>
 
-                        </li>
-                        <li>
-                        <script language="javascript">
-						  if (window.crypto && window.crypto.getRandomValues) {
-								 document.write('<span style="color: #009900;">&#10004; Your browser is capable of generating cryptographically random keys using window.crypto.getRandomValues</span>');
-						  } else {
-								 document.write('<span style="color: #990000;">&times; Your browser does NOT support window.crypto.getRandomValues(), which is important for generating the most secure random numbers possible. Please use a more modern browser.</span>');
-						  }
-						</script>
-                        </li>
-                        <li><strong>?</strong> Are you using a secure operating system guaranteed to be free of spyware and viruses, for example, an <a href="https://bitcoinpaperwallet.com/#purchase" target="_blank">Ubuntu LiveCD</a>?</li>
-                        </ul>
+						<p>Here's an overview of what will happen, step by step:</p>
 
-                        <p><a href="https://bitcoinpaperwallet.com/#security" target="_blank">More security tips</a></p>
-
-                        </div>
-
-						<span id="instructions2"><b>Step 1: Calibrate Printer</b><br />
-                        Before printing out a wallet you'll need to "calibrate" your output using the <em>zoom</em> and <em>horizontal&nbsp;shift</em> adjustments to accommodate your particular browser / printer combination. Without proper callibration, your wallet may print out too small or with a misaligned reverse side.</span>
-						<br /><br />
-						<span id="instructions3"><b>Step 2: Print Front</b><br />
-                        Next we'll print out the front side of your wallet. A public address and private key will automatically be generated, or you can supply your own key if you are using 'vanitygen' or some other random key generator.</span>
-						<br /><br />
-						<span id="instructions4"><b>Step 3: Print Back</b><br />
-                        Then you will put the same page back in your printer (but flipped over) to print out the back side of your wallet. This isn't just for good looks: the back side design includes additional tamper-resistant safeguards.</span>
-						<br /><br />
-						<span id="instructions5"><b>Step 4: Cut, Fold, Seal &amp; Fund</b><br />
-                        Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer dogecoins from your online holdings to your new wallet.</span>
-                        <br /><br />
-<!-- 						<span><a href="http://www.youtube.com/watch?v=a47rrYBWjWQ" target="_blank" class="nicerButton" style="width: 400px;">90 second tutorial video on YouTube &raquo;</a></span>
-						<br /><br />
-						<span><a href="https://bitcoinpaperwallet.com/#purchase" target="_blank" class="nicerButton" style="width: 400px;">Purchase hologram stickers and/or zip-sealing bags &raquo;</a></span>
- -->
+						<p>
+							<b id="calibratewallet" onClick="ninja.tabSwitch(this);">Step 1: Calibrate Printer</b><br />
+              Before printing out a wallet you'll need to "calibrate" your output using the <em>zoom</em> and <em>horizontal&nbsp;shift</em> adjustments to accommodate your particular browser / printer combination. Without proper callibration, your wallet may print out too small or with a misaligned reverse side.
+            </p>
+						<p>
+							<b id="paperwallet" onClick="ninja.tabSwitch(this);">Step 2: Print Front</b><br />
+              Next we'll print out the front side of your wallet. A public address and private key will automatically be generated, or you can supply your own key if you are using 'vanitygen' or some other random key generator.
+            </p>
+						<p>
+							<b id="backwallet" onClick="ninja.tabSwitch(this);">Step 3: Print Back</b><br />
+              Then you will put the same page back in your printer (but flipped over) to print out the back side of your wallet. This isn't just for good looks: the back side design includes additional tamper-resistant safeguards.
+            </p>
+						<p><b id="foldwallet" onClick="ninja.tabSwitch(this);">Step 4: Cut, Fold, Seal &amp; Fund</b><br />
+              Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer dogecoins from your online holdings to your new wallet.
+            </p>
 					</div>
 				</div>
 			</div><!-- end landarea -->
 
 
 
+			<!-- =============================
+			1. Calibrate Printer
+			===============================-->
+
 			<div id="calibratearea" class="walletarea">
 				<div class="commands">
 					<div id="calibratecommands">
 						<p id="calibrateinstructions" class="instructions">To calibrate your output, <a href="#" onClick="doPrint('calibration');">print out this page</a> in LANDSCAPE (wide) format. Based on the results, adjust the "zoom" and "horizontal shift" until your printed ruler approximates a real ruler, and leaves equal margins on the left and right sides of the page. Consider <a href="https://bitcoinpaperwallet.com/feedback/">letting us know</a> what settings worked best.</p>
 						<span class="print">
-                        <a href="#" class="nicerButton" onClick="doPrint('calibration');">Print Calibration Test</a>
-                        </span>
+              <a href="#" class="nicerButton" onClick="doPrint('calibration');">Print Calibration Test</a>
+            </span>
 					</div>
 				</div>
 
@@ -6716,50 +6682,57 @@ Bitcoin.Util = {
 
 
 
-
+			<!-- =============================
+			2. Print Front
+			===============================-->
 
 			<div id="paperarea" class="walletarea">
 				<div id="papercommands" class="commands">
-					<div style="display: none;"><!-- no need to reveal these -->
-                    	<span><label id="paperlabelhideart">Hide Art?</label> <input type="checkbox" id="paperart" onChange="ninja.wallets.paperwallet.toggleArt(this); " /></span>
-                    	<span><label id="paperlabeladdressesperpage">Addresses per page:</label> <input type="text" id="paperlimitperpage" /></span>
+					<div>
+            <span style="display: none;"><label id="paperlabelhideart">Hide Art?</label> <input type="checkbox" id="paperart" onChange="ninja.wallets.paperwallet.toggleArt(this); " /></span>
+            <span><label id="paperlabeladdressesperpage">Addresses per page:</label> <input type="text" id="paperlimitperpage" /></span>
 						<span><label id="paperlabeladdressestogenerate">Addresses to generate:</label> <input type="text" id="paperlimit" /></span>
-                    </div>
+          </div>
 
-                    <div id="keyButtons" style="display: block; float: left;">
-                    <input type="button" id="papergenerate" value="Random-generate new keys" onClick="ninja.wallets.paperwallet.build(document.getElementById('paperlimit').value * 1, document.getElementById('paperlimitperpage').value * 1, !document.getElementById('paperart').checked); printCounter=0;" />
+          <div id="keyButtons" style="display: block; float: left;">
+          	<input type="button" id="papergenerate" value="Random-generate new keys" onClick="ninja.wallets.paperwallet.build(document.getElementById('paperlimit').value * 1, document.getElementById('paperlimitperpage').value * 1, !document.getElementById('paperart').checked); printCounter=0;" />
 
-                    <input type="button" id="papergenerate" value="Supply my own key or vanity address..." onClick="document.getElementById('keyButtons').style.display='none'; document.getElementById('supplyKeys').style.display='block';" />
-                    </div>
+          	<input type="button" id="papergenerate" value="Supply my own key or vanity address..." onClick="document.getElementById('keyButtons').style.display='none'; document.getElementById('supplyKeys').style.display='block';" />
+          </div>
 
-                    <div id="supplyKeys" style="display: none;">
-                    <p style="padding: 0; margin: 0;"><input placeholder="Paste your PRIVATE key here" id="suppliedPrivateKey" name="suppliedPrivateKey" size="75" spellcheck="false" style="font-family: ubuntu_mono_bold, 'Courier New', Courier, monospace;" />&nbsp;<input type="button" id="papergenerate" value="Test &amp; Apply &raquo;" onClick="testAndApplyVanityKey();" />
-                    </p>
-                    <p style="margin: 0; padding:0;"><a href="#" style="font-size: 11px;" onClick="document.getElementById('keyButtons').style.display='block'; document.getElementById('supplyKeys').style.display='none';">&laquo; Back</a></p>
-                    </div>
-
+          <div id="supplyKeys" style="display: none;">
+          	<p style="padding: 0; margin: 0;">
+          		<input placeholder="Paste your PRIVATE key here" id="suppliedPrivateKey" name="suppliedPrivateKey" size="75" spellcheck="false" style="font-family: ubuntu_mono_bold, 'Courier New', Courier, monospace;" />&nbsp;
+          		<input type="button" id="papergenerate" value="Test &amp; Apply &raquo;" onClick="testAndApplyVanityKey();" />
+          	</p>
+          	<p style="margin: 0; padding:0;">
+          		<a href="#" style="font-size: 11px;" onClick="document.getElementById('keyButtons').style.display='block'; document.getElementById('supplyKeys').style.display='none';">&laquo; Back</a>
+          	</p>
+          </div>
 
 					<span class="print">
-                    <a href="#" class="nicerButton" onClick="doPrint('generate');">Print Wallet Front</a>
-                    </span>
-                    <br clear="all" />
+            <a href="#" class="nicerButton" onClick="doPrint('generate');">Print Wallet Front</a>
+          </span>
+          <br clear="all" />
 				</div>
 				<div id="paperkeyarea"></div>
 			</div><!-- end paperarea -->
 
 
 
-
+			<!-- =============================
+			3. Print Back
+			===============================-->
 
 			<div id="backarea" class="walletarea">
 				<div class="commands">
 					<div id="backcommands">
 						<p id="backinstructions" class="instructions highlighted">Reload the front page into your printer first. And don't forget to print in LANDSCAPE mode!</p>
 						<span class="print">
-                        <a href="#" class="nicerButton" onClick="doPrint();">Print Wallet Back</a>
-                        </span>
+              <a href="#" class="nicerButton" onClick="doPrint();">Print Wallet Back</a>
+            </span>
 					</div>
-                    <br clear="all" />
+          <br clear="all" />
 				</div>
 
 				<img id="backsvg1" class="backsvg" src="./images/back-300dpi.jpg">
@@ -6768,103 +6741,97 @@ Bitcoin.Util = {
 
 
 
+			<!-- =============================
+			4. Cut, Fold, Seal, Fund
+			===============================-->
+
 			<div id="foldarea" class="walletarea">
-				<div id="foldcommands" class="commands">
-					&nbsp;
-				</div>
 				<div class="instructionsarea">
 					<div class="notes">
-					  <h1><span id="instructions21">How to cut &amp; fold your 2-sided wallet:</span></h1>
+					  <h1>How to cut and fold your 2-sided wallet:</h1>
 
-						<span id="instructions22">Cut out your wallet <em>(use the dotted lines on the front as a guide, not the back!)</em>
-                        <br />
-                        <br />
-                        Now fold the more narrow private key area in half, and then over again as indicated by the dotted lines in this diagram:</span><br />
-                        <img src="./images/finished-folds.png" width="355" height="144" alt="Folding Diagram">
-                        <br />
-                        <br />
-						<span id="instructions23">The final wallet will be a rectangle shape with the more narrow private key area folded over it, like this:</span>
-						<br />
+						<p>Cut out your wallet <em>(use the dotted lines on the front as a guide, not the back!)</em></p>
 
-                        <img src="images/finished-sample.jpg" width="400" height="203" alt="Sample Wallet">
+            <p>Now fold the more narrow private key area in half, and then over again as indicated by the dotted lines in this diagram:</p>
 
-                        <br />
-                        <br />
-						<span id="instructions13">Finally seal your wallet by placing two strips of sturdy <strong>light-blocking</strong> tape over the top and bottom edges of the private (folded) area. A zip-seal bag will keep it safe from moisture (especially important for inkjet prints.)</span>
-						<br /><br />
-                        <a href="https://bitcoinpaperwallet.com/#purchase" target="_blank" class="nicerButton" style="width: 400px;">Purchase hologram stickers and/or zip-sealing bags &raquo;</a>
-						<br /><br />
-                        <img src="images/finished-sample-sealed.jpg" width="400" height="203" alt="Sealed Wallet">
+            <p><img src="./images/finished-folds.png" width="355" height="144" alt="Folding Diagram"></p>
 
-						<br /><br />
+						<p>The final wallet will be a rectangle shape with the more narrow private key area folded over it, like this:</p>
 
-						<h1><span id="instructions16">How to add funds to your wallet:</span></h1>
+						<p><img src="images/finished-sample.jpg" width="400" height="203" alt="Sample Wallet"></p>
 
-						<span id="instructions17">Send dogecoins to the address (or QR code) where your wallet says "Very Address" and "So Public".</span>
-						<br /><br />
+						<p>Finally seal your wallet by placing two strips of sturdy <strong>light-blocking</strong> tape over the top and bottom edges of the private (folded) area. A zip-seal bag will keep it safe from moisture (especially important for inkjet prints.)</p>
 
-						<h1><span id="instructions18">How to withdraw funds from your wallet:</span></h1>
+            <p><a href="https://bitcoinpaperwallet.com/#purchase" target="_blank" class="nicerButton" style="width: 550px;">Purchase hologram stickers and/or zip-sealing bags from BitcoinPaperWallet</a></p>
 
-						<span id="instructions19">You should expect to withdraw the entire balance of the wallet by importing it (or "sweeping" it) to a live wallet, e.g. dogecoin-qt
+						<p><img src="images/finished-sample-sealed.jpg" width="400" height="203" alt="Sealed Wallet"></p>
+
+						<h1>How to add funds to your wallet:</h1>
+
+						<p>Send dogecoins to the address (or QR code) where your wallet says "Very Address" and "So Public".</p>
+
+						<h1>How to withdraw funds from your wallet:</h1>
+
+						<p>You should expect to withdraw the entire balance of the wallet by importing it (or "sweeping" it) to a live wallet, e.g. dogecoin-qt</p>
 
 					</div>
 				</div>
-			</div><!-- end landarea -->
-
-
+			</div><!-- end fold -->
 
 		</div><!-- *** end wallets *** -->
 
 		<div id="footer" class="footer">
 			<div class="authorbtc">
 				<div>
-					<span class="item" id="footerlabeldonations"><b>Support Dogecoin Paper Wallet</b></span>
-                    <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
-                    <strong>very dogecoin</strong>: DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7<br />
-                    <strong>such bitcoin</strong>:&nbsp; 1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU<br /></span>
-                </div>
-				<div>
-					<span class="item" id="footerlabeltranslatedby"></span>
-				</div>
+					<span class="item"><b>Support Dogecoin Paper Wallet</b></span>
+          <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
+            <strong>very dogecoin</strong>: DAWGAuMCMYCwHoU6DMNkGwrB9rGG3sY1t7<br />
+            <strong>such bitcoin</strong>:&nbsp; 1BrQpq4qdxnwJoD2WKKNMo4PLa8oi2mxAU<br />
+          </span>
+        </div>
+        <div class="copyright">
+        	<p>
+        		&copy; Copyright 2014 <a href="http://mariposan.org">Mariposan</a>, <a href="https://generic.cx/">Marcos Ojeda</a>, <a href="https://bitcoinpaperwallet.com/">Canton Becker</a> and Pointbiz<br />
+        		JavaScript copyrights are included in the source.<br />
+        		<strong>No warranty.</strong>
+        	</p>
+        </div>
 			</div>
 			<div class="authorpgp">
+				<div id="siginfo" style="display: none; position: absolute; top: -300px;">
+          <p class="closeme"><a href="#" onClick="document.getElementById('siginfo').style.display='none'; return(false);">X</a></p>
+          After downloading and extracting the <a href="https://github.com/mariposan/dogecoinpaperwallet" target="_blank">ZIP package</a> for this generator, you should find a file named <b>generate-wallet.html.sig</b>
+          which you can use to:
+          <ol><li> verify that <strong>generate-wallet.html</strong> hasn't been tampered with, and</li>
+          <li>get proof that it really was authored by Mariposan (hello@mariposan.org) whose public key and fingerprint can be confirmed at <a href="http://mariposan.org/pgp">mariposan.org/pgp</a></li>
+          </ol>
+          For example, if you have GPG installed, just open the terminal, change directory (cd) to where this file lives, and type:<br />
+          <code>  gpg --recv-key 2089E5FD<br />
+          gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html</code>
+         	<br /><br />And then verify the signature's fingerprint against Mariposan's <a href="http://mariposan.org/pgp">published PGP/GPG fingerprint</a>.<br /><br />
+        	<a href="http://www.google.com/search?q=how+to+verify+PGP+%22.sig%22+signature+on+file">Learn how to verify a PGP-signed file &raquo;</a>
+      	</div>
 
-                <div id="siginfo" style="display: none; position: absolute; top: -300px;">
-                  <p class="closeme"><a href="#" onClick="document.getElementById('siginfo').style.display='none'; return(false);">X</a></p>
+    		<span class="item"><b>Security Details</b></span>
+      	<span class="item" style="font-size: 75%;"><a href="https://bitcoinpaperwallet.com/#security" target="_blank">For extra security</a>, do not run this generator directly from the http://mariposan.github.io/dogecoinpaperwallet website.<br />
+        Download the generator and run the HTML as a local file in your browser instead.</span>
 
-                    After downloading and extracting the <a href="https://github.com/mariposan/dogecoinpaperwallet" target="_blank">ZIP package</a> for this generator, you should find a file named <b>generate-wallet.html.sig</b>
-                    which you can use to:
-                    <ol><li> verify that <strong>generate-wallet.html</strong> hasn't been tampered with, and</li>
-                    <li>get proof that it really was authored by Mariposan (hello@mariposan.org) whose public key and fingerprint can be confirmed at <a href="http://mariposan.org/pgp">mariposan.org/pgp</a></li>
-                    </ol>
-                    For example, if you have GPG installed, just open the terminal, change directory (cd) to where this file lives, and type:<br />
-                    <code>  gpg --recv-key 2089E5FD<br />
-                    gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html</code>
-                   <br /><br />And then verify the signature's fingerprint against Mariposan's <a href="http://mariposan.org/pgp">published PGP/GPG fingerprint</a>.<br /><br />
-                  <a href="http://www.google.com/search?q=how+to+verify+PGP+%22.sig%22+signature+on+file">Learn how to verify a PGP-signed file &raquo;</a>
-                </div>
+				<span class="item"><a href="https://github.com/mariposan/dogecoinpaperwallet" target="_blank"><strong>Download</strong> (GitHub ZIP file)</a></span>
 
-            	<span class="item"><b>Security Details</b></span>
-                <span class="item" style="font-size: 75%;"><a href="https://bitcoinpaperwallet.com/#security" target="_blank">For extra security</a>, do not run this generator directly from the http://mariposan.github.io/dogecoinpaperwallet website.<br />
-                Download the generator and run the HTML as a local file in your browser instead.</span>
-				<span class="item"><a href="https://github.com/mariposan/dogecoinpaperwallet" target="_blank" id="footerlabelgithub"><strong>Download</strong> (GitHub ZIP file)</a></span>
+      	<span class="item" style="font-size: 75%;"><a href="?unittests=1">Run local encode/decode unit tests</a></span>
 
-                <span class="item" id="footerlabeltests" style="font-size: 75%;"><a href="?unittests=1">Run local encode/decode unit tests</a></span>
-
-				<span class="item" id="footerlabelsig" style="font-size: 75%;"><a href="#" onClick="document.getElementById('siginfo').style.display='block'; return(false);">Validate PGP/GPG signature</a></span>
-
-			</div>
-			<div class="copyright">
-				<span id="footerlabelcopyright1">&copy; Copyright 2014 <a href="http://mariposan.org">Mariposan</a>, <a href="https://generic.cx/">Marcos Ojeda</a>, <a href="https://bitcoinpaperwallet.com/">Canton Becker</a> and Pointbiz/bitaddress.org</span>
-				<span id="footerlabelcopyright2">JavaScript copyrights are included in the source.</span>
-				<span id="footerlabelnowarranty"><strong>No warranty.</strong></span><br />
-
+				<span class="item" style="font-size: 75%;"><a href="#" onClick="document.getElementById('siginfo').style.display='block'; return(false);">Validate PGP/GPG signature</a></span>
 			</div>
 		</div>
 	</div>
 
-	<script type="text/javascript">
 
+
+
+
+
+
+	<script type="text/javascript">
 		// bitaddress.org code -- though significantly modified for this implementation.
 		// For the original unmolested version of this code see
 		// https://github.com/pointbiz/bitaddress.org
@@ -7106,7 +7073,8 @@ Bitcoin.Util = {
 					document.getElementById(wType).className = "tab";
 					ninja.wallets[wType].close();
 				}
-				walletTab.className += " selected";
+				var tabId = document.getElementById(walletTab.id);
+				tabId.className += " selected";
 				ninja.wallets[walletTab.getAttribute("id")].open();
 			}
 		};
@@ -7119,149 +7087,6 @@ Bitcoin.Util = {
 			return result;
 		};
 	</script>
-
-	<script type="text/javascript">
-		ninja.translator = {
-			currentCulture: "en",
-
-			translate: function (culture) {
-				var dict = ninja.translator.translations[culture];
-				if (dict) {
-					// set current culture
-					ninja.translator.currentCulture = culture;
-					// update menu UI
-					for (var cult in ninja.translator.translations) {
-						document.getElementById("culture" + cult).setAttribute("class", "");
-					}
-					document.getElementById("culture" + culture).setAttribute("class", "selected");
-					// apply translations
-					for (var id in dict) {
-						if (document.getElementById(id) && document.getElementById(id).value) {
-							document.getElementById(id).value = dict[id];
-						}
-						else if (document.getElementById(id)) {
-							document.getElementById(id).innerHTML = dict[id];
-						}
-					}
-				}
-			},
-
-			get: function (id) {
-				var translation = ninja.translator.translations[ninja.translator.currentCulture][id];
-				return translation;
-			},
-
-			translations: {
-				"en": {
-					// javascript alerts or messages
-					"paperlabelbitcoinaddress": "Bitcoin Address:",
-					"paperlabelprivatekey": "Private Key (Wallet Import Format):",
-				},
-
-				"es": {
-					// javascript alerts or messages
-					"paperlabelbitcoinaddress": "Dirección Dogecoin:",
-					"paperlabelprivatekey": "Clave privada (formato para importar):",
-
-					// header and menu html
-					"tagline": "Generador de carteras Dogecoin de código abierto en lado de cliente con Javascript",
-					"generatelabelbitcoinaddress": "Generando dirección Dogecoin...",
-					"generatelabelmovemouse": "<blink>Mueve un poco el ratón para crear entropía...</blink>",
-					"calibratewallet": "Calibrate Printer (es)",
-					"paperwallet": "Cartera en papel",
-					"landwallet": "Welcome (Es)",
-
-					// footer html
-					"footerlabeldonations": "Donaciones:",
-					"footerlabeltranslatedby": "Traducción",
-					"footerlabelpgp": "Clave pública PGP",
-					"footerlabelversion": "Histórico de versiones",
-					"footerlabelgithub": "Repositorio GitHub",
-					"footerlabelcopyright1": "&copy; Copyright 2013 Mariposan, Canton Becker, and bitaddress.org.",
-					"footerlabelcopyright2": "Copyright del código JavaScript: en el fuente.",
-					"footerlabelnowarranty": "Sin garantía.",
-
-					// paper wallet html
-					"paperlabeladdressesperpage": "Direcciones por página:",
-					"paperlabeladdressestogenerate": "Direcciones en total:",
-					"papergenerate": "Generar",
-					"paperprint": "Imprimir"
-				},
-
-				"fr": {
-					// javascript alerts or messages
-					"paperlabelbitcoinaddress": "Adresse Dogecoin:",
-					"paperlabelprivatekey": "Clé Privée (Format d'importation de porte-monnaie):",
-
-					// header and menu html
-					"tagline": "Générateur De Porte-Monnaie Dogecoin Javascript Hors-Ligne",
-					"generatelabelbitcoinaddress": "Création de l'adresse Dogecoin...",
-					"generatelabelmovemouse": "<blink>BOUGEZ votre souris pour ajouter de l'entropie...</blink>",
-					"calibratewallet": "Calibrate Printer (fr)",
-					"paperwallet": "Porte-Monnaie Papier",
-					"landwallet": "Welcome (Fr)",
-
-					// footer html
-					"footerlabeldonations": "Dons:",
-					"footerlabeltranslatedby": "Traduction",
-					"footerlabelpgp": "Clé Publique PGP",
-					"footerlabelversion": "Historique De Version Signé",
-					"footerlabelgithub": "Dépôt GitHub",
-					"footerlabelcopyright1": "&copy; Copyright 2013 Mariposan, Canton Becker, and bitaddress.org.",
-					"footerlabelcopyright2": "Les droits d'auteurs JavaScript sont inclus dans le code source.",
-					"footerlabelnowarranty": "Aucune garantie.",
-					"newaddress": "Générer Une Nouvelle Adresse",
-
-					// paper wallet html
-					"paperlabeladdressesperpage": "Adresses par page:",
-					"paperlabeladdressestogenerate": "Nombre d'adresses à créer:",
-					"papergenerate": "Générer",
-					"paperprint": "Imprimer"
-				}
-			}
-		};
-
-		ninja.translator.showEnglishJson = function () {
-			var english = ninja.translator.translations["en"];
-			var spanish = ninja.translator.translations["es"];
-			var spanishClone = {};
-			for (var key in spanish) {
-				spanishClone[key] = spanish[key];
-			}
-			var newLang = {};
-			for (var key in english) {
-				newLang[key] = english[key];
-				delete spanishClone[key];
-			}
-			for (var key in spanishClone) {
-				if (document.getElementById(key)) {
-					if (document.getElementById(key).value) {
-						newLang[key] = document.getElementById(key).value;
-					}
-					else {
-						newLang[key] = document.getElementById(key).innerHTML;
-					}
-				}
-			}
-			var div = document.createElement("div");
-			div.setAttribute("class", "englishjson");
-			div.innerHTML = "<h3>English Json</h3>";
-			var elem = document.createElement("textarea");
-			elem.setAttribute("rows", "35");
-			elem.setAttribute("cols", "110");
-			elem.setAttribute("wrap", "off");
-			var langJson = "{\n";
-			for (var key in newLang) {
-				langJson += "\t\"" + key + "\"" + ": " + "\"" + newLang[key].replace(/\"/g, "\\\"").replace(/\n/g, "\\n") + "\",\n";
-			}
-			langJson = langJson.substr(0, langJson.length - 2);
-			langJson += "\n}\n";
-			elem.innerHTML = langJson;
-			div.appendChild(elem);
-			document.body.appendChild(div);
-		};
-	</script>
-
 
 <!-- UX controls for switching tabs -->
 
@@ -7939,11 +7764,6 @@ Bitcoin.Util = {
 			ninja.unitTests.runTests();
 			// ninja.translator.showEnglishJson();
 			// no need to show translations until we actually have some. 9/5/2013 - Canton
-		}
-
-		// change language
-		if (ninja.getQueryString()["culture"] != undefined) {
-			ninja.translator.translate(ninja.getQueryString()["culture"]);
 		}
 
 		// if users does not move mouse after random amount of time then generate the key anyway.
