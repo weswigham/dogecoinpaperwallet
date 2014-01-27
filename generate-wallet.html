@@ -6683,31 +6683,37 @@ Bitcoin.Util = {
 			2. Print Front
 			===============================-->
 
-			<div id="paperarea" class="walletarea">
-				<div id="papercommands" class="commands">
-          <div id="keyButtons" style="display: block; float: left;">
-          	<input type="button" id="papergenerate" value="Random-generate new keys" onClick="ninja.wallets.paperwallet.build(document.getElementById('paperlimit').value * 1, document.getElementById('paperlimitperpage').value * 1, !document.getElementById('paperart').checked); printCounter=0;" />
+						<div id="paperarea" class="walletarea">
+							<div id="papercommands" class="commands">
+								<div style="display: none;">
+			            <span><label id="paperlabelhideart">Hide Art?</label> <input type="checkbox" id="paperart" onChange="ninja.wallets.paperwallet.toggleArt(this); " /></span>
+			            <span><label id="paperlabeladdressesperpage">Addresses per page:</label> <input type="text" id="paperlimitperpage" /></span>
+									<span><label id="paperlabeladdressestogenerate">Addresses to generate:</label> <input type="text" id="paperlimit" /></span>
+			          </div>
 
-          	<input type="button" id="papergenerate" value="Supply my own key or vanity address..." onClick="document.getElementById('keyButtons').style.display='none'; document.getElementById('supplyKeys').style.display='block';" />
-          </div>
+			          <div id="keyButtons" style="display: block; float: left;">
+			          	<input type="button" id="papergenerate" value="Random-generate new keys" onClick="ninja.wallets.paperwallet.build(document.getElementById('paperlimit').value * 1, document.getElementById('paperlimitperpage').value * 1, !document.getElementById('paperart').checked); printCounter=0;" />
 
-          <div id="supplyKeys" style="display: none;">
-          	<p style="padding: 0; margin: 0;">
-          		<input placeholder="Paste your PRIVATE key here" id="suppliedPrivateKey" name="suppliedPrivateKey" size="75" spellcheck="false" style="font-family: ubuntu_mono_bold, 'Courier New', Courier, monospace;" />&nbsp;
-          		<input type="button" id="papergenerate" value="Test &amp; Apply &raquo;" onClick="testAndApplyVanityKey();" />
-          	</p>
-          	<p style="margin: 0; padding:0;">
-          		<a href="#" style="font-size: 11px;" onClick="document.getElementById('keyButtons').style.display='block'; document.getElementById('supplyKeys').style.display='none';">&laquo; Back</a>
-          	</p>
-          </div>
+			          	<input type="button" id="papergenerate" value="Supply my own key or vanity address..." onClick="document.getElementById('keyButtons').style.display='none'; document.getElementById('supplyKeys').style.display='block';" />
+			          </div>
 
-					<span class="print">
-            <a href="#" class="nicerButton" onClick="doPrint('generate');">Print Wallet Front</a>
-          </span>
-          <br clear="all" />
-				</div>
-				<div id="paperkeyarea"></div>
-			</div><!-- end paperarea -->
+			          <div id="supplyKeys" style="display: none;">
+			          	<p style="padding: 0; margin: 0;">
+			          		<input placeholder="Paste your PRIVATE key here" id="suppliedPrivateKey" name="suppliedPrivateKey" size="75" spellcheck="false" style="font-family: ubuntu_mono_bold, 'Courier New', Courier, monospace;" />&nbsp;
+			          		<input type="button" id="papergenerate" value="Test &amp; Apply &raquo;" onClick="testAndApplyVanityKey();" />
+			          	</p>
+			          	<p style="margin: 0; padding:0;">
+			          		<a href="#" style="font-size: 11px;" onClick="document.getElementById('keyButtons').style.display='block'; document.getElementById('supplyKeys').style.display='none';">&laquo; Back</a>
+			          	</p>
+			          </div>
+
+								<span class="print">
+			            <a href="#" class="nicerButton" onClick="doPrint('generate');">Print Wallet Front</a>
+			          </span>
+			          <br clear="all" />
+							</div>
+							<div id="paperkeyarea"></div>
+						</div><!-- end paperarea -->
 
 
 
