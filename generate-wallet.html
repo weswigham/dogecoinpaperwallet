@@ -4,20 +4,15 @@
 	<meta charset="iso-8859-1">
 	<!--
 
-    generate-wallet.html (from http://wellsriley.github.io/dogecoinpaperwallet)
+    generate-wallet.html (from http://dogecoinpaperwallet.net)
 
     email: Wells Riley (wells.riley@me.com)
 
-    generate-wallet.html is always distributed with a PGP signature "generate-wallet.html.sig" which you
-    can use to validate the integrity and authorship of this file like so:
+    generate-wallet.html is always distributed with a PGP signature "generate-wallet.html.sig" which you can use to validate the integrity and authorship of this file like so:
 
     gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
 
-    Wallet design is ©Copyright 2014 Wells Riley and Canton Becker and bitaddress.org
-
-    Portions of this code are ©Copyright 2013 Canton Becker and bitaddress.org
-    Other portions of this code are copyrighted by their respective authors - see below.
-
+    Wallet design is ©Copyright 2014 Wells Riley. See below for other credits and copyrights.
 
     **************************************************************
 		* github: http://github.com/wellsriley/dogecoinpaperwallet
@@ -28,47 +23,47 @@
 	  * Bitcoin Donation Address: 1NiNja1bUmhSoTXozBRBEtR8LeF9TGbZBN
 		* GitHub Repository:	https://github.com/pointbiz/bitaddress.org
 	  **************************************************************
+	  Portions of this code are ©Copyright 2013 Canton Becker (https://bitcoinpaperwallet.com/) and Marcos Ojeda (https://generic.cx/), bitaddress.org.
 
+		Notice of Copyrights and Licenses:
+		***********************************
+		The bitaddress.org project, software and embedded resources are copyright bitaddress.org.
 
-	Notice of Copyrights and Licenses:
-	***********************************
-	The bitaddress.org project, software and embedded resources are copyright bitaddress.org.
+		Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others.
+		The individual copyrights are included throughout the document along with their licenses.
+		Included JavaScript libraries are separated with HTML script tags.
 
-	Portions of the all-in-one HTML document contain JavaScript codes that are the copyrights of others.
-	The individual copyrights are included throughout the document along with their licenses.
-	Included JavaScript libraries are separated with HTML script tags.
+		Summary of JavaScript functions with a redistributable license:
+		JavaScript function		License
+		*******************		***************
+		Array.prototype.map		Public Domain
+		window.Crypto			BSD License
+		window.SecureRandom		BSD License
+		window.EllipticCurve		BSD License
+		window.BigInteger		BSD License
+		window.QRCode			MIT License
+		window.Bitcoin			MIT License
+		window.Crypto_scrypt		MIT License
+		ninja.(*)				MIT License			// lots of code from bitaddress.org
+		parser.setUA			GPLv2 & MIT			// UAParser.js
 
-	Summary of JavaScript functions with a redistributable license:
-	JavaScript function		License
-	*******************		***************
-	Array.prototype.map		Public Domain
-	window.Crypto			BSD License
-	window.SecureRandom		BSD License
-	window.EllipticCurve		BSD License
-	window.BigInteger		BSD License
-	window.QRCode			MIT License
-	window.Bitcoin			MIT License
-	window.Crypto_scrypt		MIT License
-	ninja.(*)				MIT License			// lots of code from bitaddress.org
-	parser.setUA			GPLv2 & MIT			// UAParser.js
+		This HTML file and the graphics required to make it work are available under The MIT License (MIT)
 
-	This HTML file and the graphics required to make it work are available under The MIT License (MIT)
+		Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+		associated documentation files (the "Software"), to deal in the Software without restriction, including
+		without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+		sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject
+		to the following conditions:
 
-	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-	associated documentation files (the "Software"), to deal in the Software without restriction, including
-	without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-	sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject
-	to the following conditions:
+		The above copyright notice and this permission notice shall be included in all copies or substantial
+		portions of the Software.
 
-	The above copyright notice and this permission notice shall be included in all copies or substantial
-	portions of the Software.
-
-	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-	LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-	WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-	SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-	-->
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+		LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+		IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+		WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+		SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+		-->
 
 	<title>Dogecoin Paper Wallet Generator. Wow.</title>
 
@@ -6601,58 +6596,60 @@ Bitcoin.Util = {
 					<div class="notes">
 						<h1>Print out a beautiful and secure wallet for your dogecoins.</h1>
 
+						<div style="float: left; width: 500px; margin-top: -20px;">
+							<p>Here's an overview of what will happen, step by step:</p>
+
+							<p>
+								<b id="calibratewallet" onClick="ninja.tabSwitch(this);">Step 1: Calibrate Printer</b><br />
+	              Before printing out a wallet you'll need to "calibrate" your output using the <em>zoom</em> and <em>horizontal&nbsp;shift</em> adjustments to accommodate your particular browser / printer combination. Without proper callibration, your wallet may print out too small or with a misaligned reverse side.
+	            </p>
+							<p>
+								<b id="paperwallet" onClick="ninja.tabSwitch(this);">Step 2: Print Front</b><br />
+	              Next we'll print out the front side of your wallet. A public address and private key will automatically be generated, or you can supply your own key if you are using 'vanitygen' or some other random key generator.
+	            </p>
+							<p>
+								<b id="backwallet" onClick="ninja.tabSwitch(this);">Step 3: Print Back</b><br />
+	              Then you will put the same page back in your printer (but flipped over) to print out the back side of your wallet. This isn't just for good looks: the back side design includes additional tamper-resistant safeguards.
+	            </p>
+							<p><b id="foldwallet" onClick="ninja.tabSwitch(this);">Step 4: Cut, Fold, Seal &amp; Fund</b><br />
+	              Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer dogecoins from your online holdings to your new wallet.
+	            </p>
+	          </div>
+
 						<div style="float: right; width: 410px; margin-left: 30px;">
 
               <img id="designPreview" src="images/finished-sample-sealed.jpg" width="400" height="266" alt="Sealed Wallet" >
 
-						<h2>Basic security checklist:</h2>
-						<ul>
-              <li>
-                <script language="javascript">
-								  switch(window.location.protocol) {
-									 case 'http:':
-									 case 'https:':
-									   document.write('<span style="color: #990000;">&times; You appear to be running this generator off of a live website, which is not recommended for creating valuable wallets. Instead, use the download link at the bottom of this page to download the ZIP file from GitHub and run this generator offline as a \'local\' HTML file.</span>');
-									   break;
-									 case 'file:':
-									   document.write('<span style="color: #009900;">&#10004; You are running this generator from your own download.</span><br />Tip: Make 100% sure you are offline by trying <a href="http://google.com" target="_blank">google.com</a></span>');
-									   break;
-									 default:
-								  }
-                </script>
-							</li>
-              <li>
-              	<script language="javascript">
-								  if (window.crypto && window.crypto.getRandomValues) {
-										 document.write('<span style="color: #009900;">&#10004; Your browser is capable of generating cryptographically random keys using window.crypto.getRandomValues</span>');
-								  } else {
-										 document.write('<span style="color: #990000;">&times; Your browser does NOT support window.crypto.getRandomValues(), which is important for generating the most secure random numbers possible. Please use a more modern browser.</span>');
-								  }
-								</script>
-              </li>
-              <li>
-              	<strong>?</strong> Are you using a secure operating system guaranteed to be free of spyware and viruses, for example, an <a href="https://bitcoinpaperwallet.com/#purchase" target="_blank">Ubuntu LiveCD</a>?
-              </li>
-            </ul>
-					</div>
-
-						<p>Here's an overview of what will happen, step by step:</p>
-
-						<p>
-							<b id="calibratewallet" onClick="ninja.tabSwitch(this);">Step 1: Calibrate Printer</b><br />
-              Before printing out a wallet you'll need to "calibrate" your output using the <em>zoom</em> and <em>horizontal&nbsp;shift</em> adjustments to accommodate your particular browser / printer combination. Without proper callibration, your wallet may print out too small or with a misaligned reverse side.
-            </p>
-						<p>
-							<b id="paperwallet" onClick="ninja.tabSwitch(this);">Step 2: Print Front</b><br />
-              Next we'll print out the front side of your wallet. A public address and private key will automatically be generated, or you can supply your own key if you are using 'vanitygen' or some other random key generator.
-            </p>
-						<p>
-							<b id="backwallet" onClick="ninja.tabSwitch(this);">Step 3: Print Back</b><br />
-              Then you will put the same page back in your printer (but flipped over) to print out the back side of your wallet. This isn't just for good looks: the back side design includes additional tamper-resistant safeguards.
-            </p>
-						<p><b id="foldwallet" onClick="ninja.tabSwitch(this);">Step 4: Cut, Fold, Seal &amp; Fund</b><br />
-              Find your scissors! The final step is to cut out your wallet, fold it, and seal it  with opaque (light-blocking) tape. Now you're ready to transfer dogecoins from your online holdings to your new wallet.
-            </p>
+							<h2>Basic security checklist:</h2>
+							<ul>
+	              <li>
+	                <script language="javascript">
+									  switch(window.location.protocol) {
+										 case 'http:':
+										 case 'https:':
+										   document.write('<span style="color: #990000;">&times; You appear to be running this generator off of a live website, which is not recommended for creating valuable wallets. Instead, use the download link at the bottom of this page to download the ZIP file from GitHub and run this generator offline as a \'local\' HTML file.</span>');
+										   break;
+										 case 'file:':
+										   document.write('<span style="color: #009900;">&#10004; You are running this generator from your own download.</span><br />Tip: Make 100% sure you are offline by trying <a href="http://google.com" target="_blank">google.com</a></span>');
+										   break;
+										 default:
+									  }
+	                </script>
+								</li>
+	              <li>
+	              	<script language="javascript">
+									  if (window.crypto && window.crypto.getRandomValues) {
+											 document.write('<span style="color: #009900;">&#10004; Your browser is capable of generating cryptographically random keys using window.crypto.getRandomValues</span>');
+									  } else {
+											 document.write('<span style="color: #990000;">&times; Your browser does NOT support window.crypto.getRandomValues(), which is important for generating the most secure random numbers possible. Please use a more modern browser.</span>');
+									  }
+									</script>
+	              </li>
+	              <li>
+	              	<strong>?</strong> Are you using a secure operating system guaranteed to be free of spyware and viruses, for example, an <a href="https://bitcoinpaperwallet.com/#purchase" target="_blank">Ubuntu LiveCD</a>?
+	              </li>
+	            </ul>
+						</div>
 					</div>
 				</div>
 			</div><!-- end landarea -->
@@ -6666,7 +6663,7 @@ Bitcoin.Util = {
 			<div id="calibratearea" class="walletarea">
 				<div class="commands">
 					<div id="calibratecommands">
-						<p id="calibrateinstructions" class="instructions">To calibrate your output, <a href="#" onClick="doPrint('calibration');">print out this page</a> in LANDSCAPE (wide) format. Based on the results, adjust the "zoom" and "horizontal shift" until your printed ruler approximates a real ruler, and leaves equal margins on the left and right sides of the page. Consider <a href="https://bitcoinpaperwallet.com/feedback/">letting us know</a> what settings worked best.</p>
+						<p id="calibrateinstructions" class="instructions">To calibrate your output, <a href="#" onClick="doPrint('calibration');">print out this page</a> in LANDSCAPE (wide) format. Based on the results, adjust the "zoom" and "horizontal shift" until your printed ruler approximates a real ruler, and leaves equal margins on the left and right sides of the page.</p>
 						<span class="print">
               <a href="#" class="nicerButton" onClick="doPrint('calibration');">Print Calibration Test</a>
             </span>
@@ -6688,12 +6685,6 @@ Bitcoin.Util = {
 
 			<div id="paperarea" class="walletarea">
 				<div id="papercommands" class="commands">
-					<div style="display: none;">
-            <span><label id="paperlabelhideart">Hide Art?</label> <input type="checkbox" id="paperart" onChange="ninja.wallets.paperwallet.toggleArt(this); " /></span>
-            <span><label id="paperlabeladdressesperpage">Addresses per page:</label> <input type="text" id="paperlimitperpage" /></span>
-						<span><label id="paperlabeladdressestogenerate">Addresses to generate:</label> <input type="text" id="paperlimit" /></span>
-          </div>
-
           <div id="keyButtons" style="display: block; float: left;">
           	<input type="button" id="papergenerate" value="Random-generate new keys" onClick="ninja.wallets.paperwallet.build(document.getElementById('paperlimit').value * 1, document.getElementById('paperlimitperpage').value * 1, !document.getElementById('paperart').checked); printCounter=0;" />
 
@@ -6727,7 +6718,7 @@ Bitcoin.Util = {
 			<div id="backarea" class="walletarea">
 				<div class="commands">
 					<div id="backcommands">
-						<p id="backinstructions" class="instructions highlighted">Reload the front page into your printer first. And don't forget to print in LANDSCAPE mode!</p>
+						<p id="backinstructions" class="instructions highlighted">Place the sheet you just printed back into the printer (be sure it will print on the <b>back</b>!). And don't forget to print in LANDSCAPE mode!</p>
 						<span class="print">
               <a href="#" class="nicerButton" onClick="doPrint();">Print Wallet Back</a>
             </span>
@@ -6748,7 +6739,7 @@ Bitcoin.Util = {
 			<div id="foldarea" class="walletarea">
 				<div class="instructionsarea">
 					<div class="notes">
-					  <h1>How to cut and fold your 2-sided wallet:</h1>
+					  <h1>How to cut and fold your dogecoin wallet:</h1>
 
 						<p>Cut out your wallet <em>(use the dotted lines on the front as a guide, not the back!)</em></p>
 
@@ -6791,8 +6782,8 @@ Bitcoin.Util = {
         </div>
         <div class="copyright">
         	<p>
-        		&copy; Copyright 2014 <a href="http://wells.ee">Wells Riley</a>, <a href="https://generic.cx/">Marcos Ojeda</a>, <a href="https://bitcoinpaperwallet.com/">Canton Becker</a> and Pointbiz<br />
-        		JavaScript copyrights are included in the source.<br />
+        		&copy; Copyright 2014 <a href="http://wells.ee">Wells Riley</a><br />
+        		Other credits and JavaScript copyrights are included in the source.<br />
         		<strong>No warranty.</strong>
         	</p>
         </div>
@@ -6813,7 +6804,7 @@ Bitcoin.Util = {
       	</div>
 
     		<span class="item"><b>Security Details</b></span>
-      	<span class="item" style="font-size: 75%;"><a href="https://bitcoinpaperwallet.com/#security" target="_blank">For extra security</a>, do not run this generator directly from the dogecoinpaperwallet.net website.<br />
+      	<span class="item" style="font-size: 75%;">For extra security, do not run this generator directly from the dogecoinpaperwallet.net website.<br />
         Download the generator and run the HTML as a local file in your browser instead.</span>
 
 				<span class="item"><a href="https://github.com/wellsriley/dogecoinpaperwallet" target="_blank"><strong>Download</strong> (GitHub ZIP file)</a></span>
