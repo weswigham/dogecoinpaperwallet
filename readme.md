@@ -7,13 +7,13 @@
 
 ### Wow. Very Security
 After downloading the ZIP package for this generator, you should find a file
-named `generate-wallet.html.sig` which you can use to:
+named `index.html.sig` which you can use to:
 
-* Verify that generate-wallet.html hasn't been tampered with, and
+* Verify that index.html hasn't been tampered with, and
 * Get proof that it really was authored by [Wells Riley](http://wells.ee/pgp).
 
 `$ gpg --recv-key F14D9476`
-`$ gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html`
+`$ gpg --verify --with-fingerprint index.html.sig index.html`
 
 And then verify the resulting signature's fingerprint against Wells Riley's published fingerprint at [http://wells.ee/pgp](http://wells.ee/pgp).
 
@@ -46,7 +46,7 @@ Use bitaddress.org if you need BIP38, brain wallets, or bulk addresses.
 ### HOW TO USE THIS GENERATOR
 
 1) Extract the ZIP file
-2) Open up the 'generate-wallet.html' file with your web browser.
+2) Open up the 'index.html' file with your web browser.
 3) Follow the steps for calibrating your printer and then printing
    the front and back of each wallet. Use landscape mode when printing!
 
@@ -72,9 +72,9 @@ You can also bypass the random key generator and supply your own keys or so-call
 ### HOW TO VERIFY THE AUTHENTICITY OF THIS DOWNLOAD
 
 After downloading the ZIP package for this generator, you should find a file
-named generate-wallet.html.sig which you can use to:
+named index.html.sig which you can use to:
 
-* Verify that generate-wallet.html hasn't been tampered with, and
+* Verify that index.html hasn't been tampered with, and
 * Get proof that it really was authored by Canton Becker (canton@gmail.com)
   whose GPG public key and fingerprint should be confirmed at http://cantonbecker.com
 
@@ -82,7 +82,7 @@ For example, if you have GPG installed, you should be able cd to the appropriate
 directory and type in these two commands:
 
   gpg --recv-key 36E1D9B6
-  gpg --verify --with-fingerprint generate-wallet.html.sig generate-wallet.html
+  gpg --verify --with-fingerprint index.html.sig index.html
 
 And then verify the resulting signature's fingerprint against Canton Becker's
 published fingerprint at http://cantonbecker.com
