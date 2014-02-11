@@ -6307,8 +6307,8 @@ Bitcoin.Util = {
 		.keyarea .privwif { margin: 0; float: right; text-align: right; padding: 0 10px 0 0; position: relative; }
 		.keyarea .label { text-decoration: underline; }
 		.keyarea .output { display: block; }
-		.keyarea .qrcode_public { display: inline-block; float: left; }
-		.keyarea .qrcode_private { display: inline-block; position: relative; top: 28px; float: right; }
+		.keyarea .qrcode_public { display: inline-block; position: relative; top: 28px; float: right; }
+		.keyarea .qrcode_private { display: inline-block; position: relative; top: 28px; float: right; margin-right: }
 		.pubkeyhex { word-wrap: break-word; }
 		.faqs ol { padding: 0 0 0 25px; }
 		.faqs li { padding: 3px 0; }
@@ -6328,7 +6328,7 @@ Bitcoin.Util = {
 
 		#calibratearea .calibratesvg { width: 1010px; height: 331px; border: 0; margin: 0; padding: 0; left: 0; }
 		#calibratearea #calibrationinfo { clear: both; text-align: center; color: #990000; padding: 10px 0;}
-		#backarea .backsvg { width: 1010px; height: 331px; border: 0; margin: 0; padding: 0; left: 0; }
+		#backarea .backsvg { width: 780px; height: 330px; border: 0; margin: 0; padding: 0; left: 0; }
 
 		#printeradjust { color: #F08D01; font-size: 13px; float: right; text-align: right; margin-top: 5px; }
 		#printeradjust span { background-color: rgba(0,0,0,0); padding: 2px 3px; font-family: "Courier New", Courier, monospace; font-weight: bold; font-size: 13px; border-radius: 50%; width: 15px; height: 10px; box-sizing: border-box; }
@@ -6343,75 +6343,21 @@ Bitcoin.Util = {
 		/* alphanum for public-private keys*/
 		#paperarea .keyarea.art { display: block; height: auto; border: 0; font-family: ubuntu_mono_bold, Arial, Helvetica, sans-serif; padding: 0; margin: 0; font-size: 13px;}
 
-		#paperarea .artwallet .papersvg { width: 1010px; height: 331px; border: 0; margin: 0; padding: 0; left: 0; }
-		#paperarea .artwallet .qrcode_public { top: 120px; left: 41px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+		#paperarea .artwallet .papersvg { width: 780px; height: 330px; border: 0; margin: 0; padding: 0; left: 0; }
+		#paperarea .artwallet .qrcode_public { top: 195px; left: 300px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
 		                                       padding: 5px 5px 2px 5px; }
-		#paperarea .artwallet .qrcode_private { top: 105px; left: 827px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
+		#paperarea .artwallet .qrcode_private { top: 105px; left: 535px; z-index: 100; margin: 0; float: none; display: block; position: absolute; background-color: #FFFFFF;
 		                                        padding: 5px 5px 2px 5px; }
 		#paperarea .artwallet .btcaddress
 		{
-		    position: absolute; top: 275px; left: 40px; z-index: 100; background-color: transparent;
+		    position: absolute; top: 63px; left: 60px; z-index: 100; background-color: transparent;
 		    color: #0072b4; margin: 0;
-				-webkit-transform-origin:top left;
-				/* -webkit-transform:rotate(-90deg); */
-				-moz-transform-origin:top left;
-				/*-moz-transform:rotate(-90deg); */
-				-ms-transform-origin:top left;
-				/*-ms-transform:rotate(-90deg);*/
-				-o-transform-origin:top left;
-				/*-o-transform:rotate(-90deg);*/
-				transform-origin:top left;
-				/*transform:rotate(-90deg);*/
-		}
-
-		#paperarea .artwallet .dupbtcaddress
-		{
-		    position: absolute; top: 45px; left: 40px; z-index: 100; background-color: transparent;
-		    color: #0072b4; margin: 0;
-				/* -webkit-transform-origin:top left; */
-				-webkit-transform:rotate(-180deg);
-				/* -moz-transform-origin:top left; */
-				-moz-transform:rotate(-180deg);
-				/* -ms-transform-origin:top left; */
-				-ms-transform:rotate(-180deg);
-				/* -o-transform-origin:top left; */
-				-o-transform:rotate(-180deg);
-				/* transform-origin:top left; */
-				transform:rotate(-180deg);
 		}
 
 		#paperarea .artwallet .btcprivwif
 		{
-		    position: absolute; top: 245px; left: 610px; z-index: 100; background-color: transparent;
+		    position: absolute; top: 125px; left: 60px; z-index: 100; background-color: transparent;
 		    color: #0072b4; margin: 0;
-				-webkit-print-color-adjust: exact;
-				-webkit-transform-origin:top left;
-				/*-webkit-transform:rotate(-90deg);*/
-				-moz-transform-origin:top left;
-				/*-moz-transform:rotate(-90deg);*/
-				-ms-transform-origin:top left;
-				/*-ms-transform:rotate(-90deg);*/
-				-o-transform-origin:top left;
-				/*-o-transform:rotate(-90deg);*/
-				transform-origin:top left;
-				/*transform:rotate(-90deg);*/
-		}
-
-		#paperarea .artwallet .dupbtcprivwif
-		{
-		    position: absolute; top: 75px; left: 610px; z-index: 100; background-color: transparent;
-		    color: #0072b4; margin: 0;
-				-webkit-print-color-adjust: exact;
-				/* -webkit-transform-origin:top left; */
-				-webkit-transform:rotate(-180deg);
-				/* -moz-transform-origin:top left; */
-				-moz-transform:rotate(-180deg);
-				/* -ms-transform-origin:top left; */
-				-ms-transform:rotate(-180deg);
-				/* -o-transform-origin:top left; */
-				-o-transform:rotate(-180deg);
-				/* transform-origin:top left; */
-				transform:rotate(-180deg);
 		}
 
 		.nicerButton { /* thanks http://www.cssbuttongenerator.com */
@@ -6597,11 +6543,6 @@ Bitcoin.Util = {
 						<h1>Print out a beautiful and secure wallet for your dogecoins.</h1>
 
 						<div style="float: left; width: 500px; margin-top: -20px;">
-
-							<div style="border-radius:5px;background:#C6EAFF;padding:4px 20px 1px;font-size:15px;">
-								<p>Looking for a comprehensive guide to using dogecoin paper wallets? Check out <a href="http://dogecointutorial.com/paper-wallet.html" target="_blank">Dogecoin Tutorial</a>!</p>
-							</div>
-
 							<p>Here's an overview of what will happen, step by step:</p>
 
 							<p>
@@ -6737,7 +6678,7 @@ Bitcoin.Util = {
           <br clear="all" />
 				</div>
 
-				<img id="backsvg1" class="backsvg" src="./images/back-300dpi.jpg">
+				<img id="backsvg1" class="backsvg" src="./images/paperdoge_back.png">
 
 			</div><!-- end backarea -->
 
@@ -6750,12 +6691,7 @@ Bitcoin.Util = {
 			<div id="foldarea" class="walletarea">
 				<div class="instructionsarea">
 					<div class="notes">
-
 					  <h1>How to cut and fold your dogecoin wallet:</h1>
-
-					  <div style="border-radius:5px;background:#C6EAFF;padding:4px 20px 1px;font-size:15px;margin:20px 0;">
-					  	<p>Looking for a comprehensive guide to using dogecoin paper wallets? Check out <a href="http://dogecointutorial.com/paper-wallet.html" target="_blank">Dogecoin Tutorial</a>!</p>
-					  </div>
 
 						<p>Cut out your wallet <em>(use the dotted lines on the front as a guide, not the back!)</em></p>
 
@@ -7246,7 +7182,6 @@ Bitcoin.Util = {
 								"<div class='pubaddress'>" +
 									"<span class='label'>" + ninja.translator.get("paperlabelbitcoinaddress") + "</span>" +
 									"<span class='output' id='btcaddress" + i + "'></span>" +
-									"<span class='output' id='dupbtcaddress" + i + "'></span>" +
 								"</div>" +
 							"</div>" +
 							"<div class='private'>" +
@@ -7254,7 +7189,6 @@ Bitcoin.Util = {
 								"<div class='privwif'>" +
 									"<span class='label'>" + ninja.translator.get("paperlabelprivatekey") + "</span>" +
 									"<span class='output' id='btcprivwif" + i + "'></span>" +
-									"<span class='output' id='dupbtcprivwif" + i + "'></span>" +
 								"</div>" +
 							"</div>";
 				return walletHtml;
@@ -7262,9 +7196,7 @@ Bitcoin.Util = {
 
 			showWallet: function (idPostFix, bitcoinAddress, privateKeyWif) {
 				document.getElementById("btcaddress" + idPostFix).innerHTML = bitcoinAddress;
-				document.getElementById("dupbtcaddress" + idPostFix).innerHTML = bitcoinAddress;
 				document.getElementById("btcprivwif" + idPostFix).innerHTML = privateKeyWif;
-				document.getElementById("dupbtcprivwif" + idPostFix).innerHTML = privateKeyWif;
 				var keyValuePair = {};
 				keyValuePair["qrcode_public" + idPostFix] = bitcoinAddress;
 				keyValuePair["qrcode_private" + idPostFix] = privateKeyWif;
@@ -7277,12 +7209,10 @@ Bitcoin.Util = {
 							"<div class='artwallet' id='artwallet" + i + "'>" +
 				//"<iframe src='bitcoin-wallet-01.svg' id='papersvg" + i + "' class='papersvg' ></iframe>" +
 								"<img id='papersvg" + i + "' class='papersvg' src='" + window.frontJPG + "' />" +
+								"<div class='btcaddress' id='btcaddress" + i + "'></div>" +
+								"<div class='btcprivwif' id='btcprivwif" + i + "'></div>" +
 								"<div id='qrcode_public" + i + "' class='qrcode_public'></div>" +
 								"<div id='qrcode_private" + i + "' class='qrcode_private'></div>" +
-								"<div class='btcaddress' id='btcaddress" + i + "'></div>" +
-								"<div class='dupbtcaddress' id='dupbtcaddress" + i + "'></div>" +
-								"<div class='btcprivwif' id='btcprivwif" + i + "'></div>" +
-								"<div class='dupbtcprivwif' id='dupbtcprivwif" + i + "'></div>" +
 							"</div>";
 				return walletHtml;
 			},
@@ -7293,9 +7223,7 @@ Bitcoin.Util = {
 				keyValuePair["qrcode_private" + idPostFix] = privateKeyWif;
 				ninja.qrCode.showQrCode(keyValuePair, 2.75);
 				document.getElementById("btcaddress" + idPostFix).innerHTML = bitcoinAddress;
-				document.getElementById("dupbtcaddress" + idPostFix).innerHTML = bitcoinAddress;
 				document.getElementById("btcprivwif" + idPostFix).innerHTML = privateKeyWif;
-				document.getElementById("dupbtcprivwif" + idPostFix).innerHTML = privateKeyWif;
 
 				// CODE to modify SVG DOM elements
 				//var paperSvg = document.getElementById("papersvg" + idPostFix);
@@ -7888,9 +7816,9 @@ Bitcoin.Util = {
 	function setDesign (whichDesign) {
 		if (!whichDesign) whichDesign = 'default';
 		if (whichDesign == 'default') {
-			var myFront = './images/front-300dpi.jpg';
-			var myBack = './images/back-300dpi.jpg';
-			var myPreview = './images/finished-sample-sealed.jpg';
+			var myFront = './images/paperdoge_back.png';
+			var myBack = './images/paperdoge_front.png';
+			var myPreview = './images/paperdoge.png';
 		} else {
 			var myFront = './images/front-300dpi-' + whichDesign + '.jpg';
 			var myBack = './images/back-300dpi-' + whichDesign + '.jpg';
